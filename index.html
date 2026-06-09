@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete Home Today — Frontier® &amp; EarthLink® Internet | Authorized Sales Agent</title>
+<meta name="description" content="Compare and order high-speed fiber internet from Frontier and EarthLink with Complete Home Today, an independent Authorized Sales Agent. Now hiring door-to-door sales reps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1422;--navy2:#0f1d30;--navy3:#16273d;
+  --ink:#eef3f9;--muted:#9bacc1;--faint:#69788c;
+  --line:rgba(255,255,255,.085);--line2:rgba(255,255,255,.14);
+  --red:#ec1c34;--red-br:#ff3a51;
+  --earth:#15b5a3;--earth-br:#2ad6c2;
+  --blue:#2f74d0;--blue-br:#5b9bf0;
+  --gold:#f5a623;--gold-br:#ffc048;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red-br)}
+.eyebrow.gold{color:var(--gold-br)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;padding:14px 26px;border-radius:999px;border:none;cursor:pointer;transition:.2s}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px -8px rgba(236,28,52,.6)}
+.btn-red:hover{background:var(--red-br);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#0a1422;box-shadow:0 10px 30px -8px rgba(245,166,35,.5)}
+.btn-gold:hover{background:var(--gold-br);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line2)}
+.btn-ghost:hover{border-color:var(--ink);background:rgba(255,255,255,.04)}
+.hidden{display:none!important}
+
+/* topbar */
+.topbar{background:#06101c;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center;padding:7px 16px}
+.topbar b{color:var(--ink);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,20,34,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-mark{font-family:'Archivo',sans-serif;font-weight:900;font-size:23px;letter-spacing:-.03em;color:#fff}
+.logo-mark .dot{color:var(--red)}
+.logo-tag{font-family:'Archivo',sans-serif;font-weight:700;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--line2);padding-left:11px;line-height:1.3}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-weight:600;font-size:14.5px;color:var(--muted);transition:.15s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.hiring-link{color:var(--gold-br)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .btn{padding:11px 20px;font-size:14px}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+
+/* hero */
+.hero{position:relative;padding:96px 0 84px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-340px;left:50%;transform:translateX(-50%);width:1100px;height:760px;background:radial-gradient(ellipse at center,rgba(236,28,52,.32),transparent 62%);filter:blur(30px);pointer-events:none}
+.fiber{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.5}
+.fiber span{position:absolute;height:1.5px;width:240px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--red-br),transparent);animation:streak 5.5s linear infinite}
+.fiber span:nth-child(1){top:18%;animation-delay:0s}
+.fiber span:nth-child(2){top:40%;animation-delay:1.6s;width:320px;background:linear-gradient(90deg,transparent,var(--earth-br),transparent)}
+.fiber span:nth-child(3){top:64%;animation-delay:3s;width:200px}
+.fiber span:nth-child(4){top:82%;animation-delay:2.2s;width:280px;background:linear-gradient(90deg,transparent,var(--earth-br),transparent)}
+@keyframes streak{0%{left:-340px;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:100%;opacity:0}}
+.hero-in{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+.hero h1{font-size:clamp(40px,5.4vw,66px);font-weight:900;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:var(--red-br)}
+.hero p.lead{font-size:18.5px;color:var(--muted);max-width:530px;margin-bottom:28px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:20px;font-size:13px;color:var(--faint)}
+.hero-vis{display:flex;justify-content:center}
+.speed-card{background:linear-gradient(160deg,var(--navy3),var(--navy2));border:1px solid var(--line2);border-radius:24px;padding:34px 32px;width:100%;max-width:340px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.speed-card .sc-lab{font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.speed-card .sc-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:74px;line-height:.95;margin:6px 0 2px;background:linear-gradient(180deg,#fff,#cdd9e6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.speed-card .sc-unit{font-weight:700;color:var(--muted);font-size:15px}
+.speed-card .sc-bar{height:8px;background:var(--navy);border-radius:6px;margin:22px 0 8px;overflow:hidden}
+.speed-card .sc-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--red),var(--earth-br));animation:fill 2.4s ease}
+@keyframes fill{from{width:6%}to{width:100%}}
+.speed-card .sc-sub{display:flex;justify-content:space-between;font-size:12px;color:var(--faint)}
+.speed-card .sc-row{display:flex;align-items:center;gap:9px;margin-top:15px;font-size:13.5px;color:var(--muted)}
+.speed-card .sc-row b{color:var(--ink);font-weight:600}
+.tick{color:var(--red-br);font-weight:800}
+.tick-gold{color:var(--gold-br);font-weight:800}
+
+/* trust bar */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#081120}
+.trust-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:22px 0}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--muted)}
+.trust-item .tk{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:rgba(236,28,52,.14);color:var(--red-br);font-size:12px;font-weight:900}
+
+section{padding:84px 0}
+.sec-head{max-width:660px;margin-bottom:42px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);margin:14px 0 14px}
+.sec-head p{color:var(--muted);font-size:17px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* provider toggle */
+.toggle{display:inline-flex;background:var(--navy2);border:1px solid var(--line2);border-radius:999px;padding:5px;gap:4px;margin-bottom:34px}
+.toggle button{font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px;padding:11px 26px;border-radius:999px;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:.18s}
+.toggle button.active[data-prov="frontier"]{background:var(--red);color:#fff}
+.toggle button.active[data-prov="earthlink"]{background:var(--earth);color:#04201d}
+
+/* plan grid */
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{position:relative;background:var(--navy2);border:1px solid var(--line);border-radius:18px;padding:28px 24px;transition:.2s;display:flex;flex-direction:column}
+.plan:hover{transform:translateY(-5px);border-color:var(--line2)}
+.plan.feat{border-color:var(--red);background:linear-gradient(170deg,var(--navy3),var(--navy2));box-shadow:0 30px 60px -28px rgba(236,28,52,.5)}
+.plan.feat.earth{border-color:var(--earth);box-shadow:0 30px 60px -28px rgba(21,181,163,.45)}
+.plan.adt{border-color:var(--blue);box-shadow:0 30px 60px -28px rgba(47,116,208,.3)}
+.plan.adt .ribbon{background:var(--blue);color:#fff}
+.plan.adt li::before{border-color:var(--blue-br)}
+.sec-meta{font-size:12px;color:var(--faint);font-weight:600;border-top:1px solid var(--line);padding-top:13px;margin-bottom:16px}
+.plan .ribbon{position:absolute;top:-12px;left:24px;background:var(--red);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:6px}
+.plan.earth .ribbon{background:var(--earth);color:#04201d}
+.plan .p-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:21px}
+.plan .p-tier{font-size:12.5px;color:var(--faint);font-weight:600;margin-top:2px}
+.plan .p-speed{margin:18px 0 4px;font-family:'Archivo',sans-serif;font-weight:900;font-size:30px}
+.plan .p-speed small{font-size:13px;color:var(--muted);font-weight:600;font-family:'Hanken Grotesk'}
+.plan .p-price{display:flex;align-items:baseline;gap:4px;margin-top:14px}
+.plan .p-price .amt{font-family:'Archivo',sans-serif;font-weight:900;font-size:40px;color:#fff}
+.plan .p-price .per{color:var(--muted);font-size:14px;font-weight:600}
+.plan .p-xtra{font-size:12px;color:var(--faint);margin-top:3px}
+.plan .p-best{font-size:13.5px;color:var(--muted);margin:10px 0 16px;min-height:40px}
+.plan ul{list-style:none;border-top:1px solid var(--line);padding-top:14px;margin-bottom:20px;flex:1}
+.plan li{font-size:13.5px;color:var(--muted);padding:5px 0 5px 22px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:11px;width:11px;height:6px;border-left:2px solid var(--red-br);border-bottom:2px solid var(--red-br);transform:rotate(-45deg)}
+.plan.earth li::before{border-color:var(--earth-br)}
+.plan .btn{width:100%;justify-content:center}
+.fee-note{font-size:12px;color:var(--faint);margin-top:22px;max-width:820px;line-height:1.6}
+
+/* 5G highlight */
+.hl-card{margin-top:22px;background:linear-gradient(120deg,#06231f,#0c2e2a 60%,#071b18);border:1px solid rgba(21,181,163,.4);border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center}
+.hl-card .hl-tag{display:inline-block;font-family:'Archivo',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--earth-br);border:1px solid rgba(21,181,163,.5);border-radius:6px;padding:4px 10px;margin-bottom:12px}
+.hl-card h3{font-size:25px;margin-bottom:8px}
+.hl-card p{color:#bcd6d2;font-size:14.5px}
+.hl-card ul{list-style:none;margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px}
+.hl-card li{font-size:13px;color:#bcd6d2;padding-left:18px;position:relative}
+.hl-card li::before{content:"+";position:absolute;left:0;color:var(--earth-br);font-weight:800}
+.hl-price{text-align:center}
+.hl-price .amt{font-family:'Archivo',sans-serif;font-weight:900;font-size:46px;color:#fff;line-height:1}
+.hl-price .per{color:#bcd6d2;font-size:13px}
+.hl-price .sub{font-size:11.5px;color:var(--faint);margin-top:4px}
+
+/* offers */
+.prov-block{margin-bottom:42px}
+.prov-block:last-child{margin-bottom:0}
+.prov-label{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.prov-label .pl-name{font-family:'Archivo',sans-serif;font-weight:900;font-size:21px}
+.prov-label .pl-pill{font-family:'Archivo',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px}
+.pl-pill.fr{background:rgba(236,28,52,.16);color:var(--red-br)}
+.pl-pill.el{background:rgba(21,181,163,.16);color:var(--earth-br)}
+.prov-label .pl-line{flex:1;height:1px;background:var(--line)}
+.offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.offer-grid.two{grid-template-columns:repeat(2,1fr)}
+.offer{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.2s}
+.offer:hover{transform:translateY(-4px);border-color:var(--line2)}
+.offer .o-ic{font-family:'Archivo',sans-serif;font-weight:900;font-size:17px;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;margin-bottom:14px}
+.offer.fr .o-ic{background:rgba(236,28,52,.14);color:var(--red-br)}
+.offer.el .o-ic{background:rgba(21,181,163,.14);color:var(--earth-br)}
+.offer h3{font-size:17px;margin-bottom:7px}
+.offer p{font-size:13.5px;color:var(--muted)}
+.offer .o-when{margin-top:11px;font-size:11.5px;color:var(--faint);font-weight:600}
+
+/* add-ons */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s}
+.card:hover{border-color:var(--line2);transform:translateY(-4px)}
+.card .c-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.card h3{font-size:16.5px}
+.card .c-price{font-family:'Archivo',sans-serif;font-weight:800;font-size:14.5px;white-space:nowrap}
+.card.fr .c-price{color:var(--red-br)}
+.card.el .c-price{color:var(--earth-br)}
+.card p{font-size:13.5px;color:var(--muted);margin-top:8px}
+.tag-free{display:inline-block;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--red-br);border:1px solid rgba(236,28,52,.4);border-radius:5px;padding:2px 7px;margin-top:10px}
+
+/* tv */
+.tv-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tv{background:var(--navy2);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column}
+.tv h3{font-size:23px;margin-bottom:6px}
+.tv .tv-price{font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;margin:14px 0 4px}
+.tv .tv-price span{font-size:14px;color:var(--muted);font-weight:600;font-family:'Hanken Grotesk'}
+.tv ul{list-style:none;margin:14px 0 22px}
+.tv li{font-size:14px;color:var(--muted);padding:5px 0 5px 22px;position:relative}
+.tv li::before{content:"+";position:absolute;left:2px;color:var(--red-br);font-weight:800}
+.tv-extra{margin-top:20px;background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:20px 24px;font-size:14px;color:var(--muted)}
+.tv-extra b{color:var(--ink)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
+.step .s-num{counter-increment:s;font-family:'Archivo',sans-serif;font-weight:900;font-size:14px;color:#fff;background:var(--red);width:34px;height:34px;border-radius:9px;display:grid;place-items:center;margin-bottom:16px}
+.step .s-num::before{content:counter(s)}
+.step h3{font-size:17px;margin-bottom:7px}
+.step p{font-size:13.5px;color:var(--muted)}
+
+/* ====================== HIRING SECTION ====================== */
+.hiring-hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0d1f0f 0%,#0a1810 40%,#06101c 100%);border-top:1px solid rgba(245,166,35,.18);border-bottom:1px solid rgba(245,166,35,.18);padding:96px 0 80px}
+.hiring-hero::before{content:"";position:absolute;top:-180px;right:-80px;width:640px;height:640px;background:radial-gradient(ellipse,rgba(245,166,35,.11),transparent 65%);pointer-events:none}
+.hiring-pulse{position:absolute;top:32px;right:32px;display:flex;align-items:center;gap:8px;font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-br)}
+.pulse-dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(245,166,35,.6);animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,166,35,.6)}70%{box-shadow:0 0 0 10px rgba(245,166,35,0)}100%{box-shadow:0 0 0 0 rgba(245,166,35,0)}}
+.hiring-hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+.hiring-hero h2{font-size:clamp(32px,4.8vw,56px);font-weight:900;margin:14px 0 18px;line-height:1.02}
+.hiring-hero h2 em{font-style:normal;color:var(--gold-br)}
+.hiring-hero .lead{font-size:17px;color:#a8c4a2;max-width:500px;margin-bottom:28px}
+.hiring-hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.hiring-hero-note{font-size:12.5px;color:#5a7a56}
+
+/* complaint wall */
+.complaint-wall{background:rgba(0,0,0,.35);border:1px solid rgba(245,166,35,.15);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:11px}
+.cw-label{font-family:'Archivo',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-br);margin-bottom:4px}
+.cw-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:12px 14px}
+.cw-item .cw-company{font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+.cw-item .cw-quote{font-size:13px;color:#8fa09e;line-height:1.45;font-style:italic}
+.cw-item .cw-tag{display:inline-block;margin-top:7px;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#e05252;background:rgba(224,82,82,.12);border:1px solid rgba(224,82,82,.2);border-radius:5px;padding:2px 7px}
+
+/* why grid */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why-card{position:relative;background:var(--navy2);border:1px solid var(--line);border-radius:18px;padding:28px 24px;transition:.2s;overflow:hidden}
+.why-card:hover{transform:translateY(-4px);border-color:rgba(245,166,35,.3)}
+.why-card::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(245,166,35,.03),transparent 60%);pointer-events:none}
+.why-card .wc-icon{width:46px;height:46px;border-radius:13px;background:rgba(245,166,35,.12);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
+.why-card h3{font-size:18px;margin-bottom:8px}
+.why-card p{font-size:13.5px;color:var(--muted);line-height:1.55}
+.why-card .wc-vs{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--faint);line-height:1.5}
+.why-card .wc-vs b{color:#e05252}
+
+/* competitor table */
+.comp-table-wrap{overflow-x:auto;margin-top:10px}
+.comp-table{width:100%;border-collapse:collapse}
+.comp-table th{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.comp-table td{padding:14px;font-size:13.5px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td:first-child{font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;color:var(--ink);white-space:nowrap}
+.pain{display:inline-block;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.07em;text-transform:uppercase;border-radius:5px;padding:2px 7px;margin:2px 3px 2px 0}
+.pain-red{color:#e05252;background:rgba(224,82,82,.1);border:1px solid rgba(224,82,82,.2)}
+.pain-yellow{color:#d4a017;background:rgba(212,160,23,.1);border:1px solid rgba(212,160,23,.2)}
+
+/* earnings visualizer */
+.earn-vis{background:linear-gradient(150deg,#0e1a0b,#0a1810 60%,#06101c);border:1px solid rgba(245,166,35,.2);border-radius:20px;padding:32px 36px;margin-top:48px}
+.earn-vis h3{font-size:22px;margin-bottom:6px}
+.earn-vis .ev-sub{font-size:14px;color:#7aab74;margin-bottom:28px}
+.earn-rows{display:flex;flex-direction:column;gap:14px}
+.earn-row{display:grid;grid-template-columns:140px 1fr 110px;align-items:center;gap:16px}
+.earn-row .er-label{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
+.earn-row .er-bar-wrap{background:rgba(0,0,0,.3);border-radius:6px;height:14px;overflow:hidden}
+.earn-row .er-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gold),var(--gold-br))}
+.earn-row .er-amt{font-family:'Archivo',sans-serif;font-weight:900;font-size:15px;color:var(--gold-br);text-align:right}
+.earn-note{font-size:11.5px;color:var(--faint);margin-top:18px}
+
+/* apply steps */
+.apply-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:as}
+.apply-step{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
+.apply-step .as-num{counter-increment:as;font-family:'Archivo',sans-serif;font-weight:900;font-size:14px;color:#0a1422;background:var(--gold);width:34px;height:34px;border-radius:9px;display:grid;place-items:center;margin-bottom:16px}
+.apply-step .as-num::before{content:counter(as)}
+.apply-step h3{font-size:17px;margin-bottom:7px}
+.apply-step p{font-size:13.5px;color:var(--muted)}
+
+/* forms */
+.avail{background:#081120;border-top:1px solid var(--line)}
+.avail-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.hire-avail-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.avail-copy h2,.hire-copy h2{font-size:clamp(28px,3.6vw,40px);margin:14px 0 14px}
+.avail-copy p,.hire-copy p{color:var(--muted);font-size:16px;margin-bottom:18px}
+.avail-copy .ac-row{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--muted);margin-top:10px}
+.hire-copy .hc-row{display:flex;gap:10px;align-items:center;font-size:14px;color:#7aab74;margin-top:10px}
+.form-card{background:var(--navy2);border:1px solid var(--line2);border-radius:20px;padding:30px}
+.hire-form-card{background:var(--navy2);border:1px solid rgba(245,166,35,.2);border-radius:20px;padding:30px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12.5px;font-weight:600;color:var(--muted)}
+.field input,.field select,.field textarea{background:var(--navy);border:1px solid var(--line2);border-radius:10px;padding:12px 13px;color:var(--ink);font-family:inherit;font-size:14.5px;transition:.15s}
+.field textarea{resize:vertical;min-height:80px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,166,35,.15)}
+.form-card .field input:focus,.form-card .field select:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(236,28,52,.18)}
+.field input::placeholder,.field textarea::placeholder{color:var(--faint)}
+.field-note{font-size:11px;color:var(--faint);line-height:1.45}
+.form-fine{font-size:11.5px;color:var(--faint);margin-top:14px;line-height:1.5}
+.form-err{display:none;font-size:13px;color:#ff9aa6;background:rgba(236,28,52,.1);border:1px solid rgba(236,28,52,.32);border-radius:10px;padding:11px 13px;margin-top:12px}
+.form-done{text-align:center;padding:24px 10px;display:none}
+.form-done .ck{width:60px;height:60px;border-radius:50%;background:rgba(236,28,52,.15);display:grid;place-items:center;margin:0 auto 16px;font-size:28px;color:var(--red-br)}
+.form-done h3{font-size:22px;margin-bottom:8px}
+.form-done p{color:var(--muted);font-size:14.5px}
+.form-done-hire{text-align:center;padding:24px 10px;display:none}
+.form-done-hire .ck{width:60px;height:60px;border-radius:50%;background:rgba(245,166,35,.15);display:grid;place-items:center;margin:0 auto 16px;font-size:28px;color:var(--gold-br)}
+.form-done-hire h3{font-size:22px;margin-bottom:8px}
+.form-done-hire p{color:var(--muted);font-size:14.5px}
+
+/* faq */
+.faq-list{max-width:820px;margin:0 auto}
+details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--navy2);overflow:hidden}
+details[open]{border-color:var(--line2)}
+summary{cursor:pointer;list-style:none;padding:18px 22px;font-family:'Archivo',sans-serif;font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary .pm{font-size:22px;color:var(--red-br);transition:.2s;line-height:1}
+details[open] summary .pm{transform:rotate(45deg)}
+details .ans{padding:0 22px 20px;color:var(--muted);font-size:14.5px}
+details.gold-faq summary .pm{color:var(--gold-br)}
+
+/* footer */
+footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.foot-top p{color:var(--muted);font-size:14px;margin-top:14px;max-width:340px}
+.foot-col h4{font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
+.foot-col a,.foot-col span{display:block;color:var(--muted);font-size:14px;margin-bottom:9px}
+.foot-col a:hover{color:var(--ink)}
+.disclosure{font-size:11.5px;color:var(--faint);line-height:1.7;padding-top:26px}
+.disclosure b{color:var(--muted)}
+.copyr{margin-top:18px;font-size:11.5px;color:var(--faint)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero-in,.hiring-hero-in{grid-template-columns:1fr;gap:40px}
+  .hero-vis{order:-1}
+  .plan-grid,.cards,.offer-grid{grid-template-columns:1fr 1fr}
+  .tv-grid,.avail-in,.hire-avail-in,.hl-card{grid-template-columns:1fr;gap:26px}
+  .steps,.apply-steps{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--navy2);border-bottom:1px solid var(--line);padding:18px 24px;gap:18px}
+  .burger{display:flex}
+  .nav-cta .btn:not(.burger){display:none}
+  .earn-row{grid-template-columns:100px 1fr 90px}
+  .hiring-pulse{display:none}
+}
+@media(max-width:560px){
+  .plan-grid,.cards,.offer-grid,.offer-grid.two,.steps,.apply-steps,.why-grid,.form-grid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .hero,.hiring-hero{padding:60px 0 52px}
+  .trust-in{justify-content:flex-start;gap:14px 22px}
+  .earn-row{grid-template-columns:90px 1fr 80px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <b>Complete Home Today</b> is an independent Authorized Sales Agent for Frontier® &amp; EarthLink® internet — not Frontier or EarthLink. &nbsp;|&nbsp; <a href="#hiring" style="color:var(--gold-br);font-weight:700">Now Hiring Sales Reps →</a>
+</div>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Complete Home Today home">
+      <span class="logo-mark">COMPLETE<span class="dot">·</span>HOME</span>
+      <span class="logo-tag">Authorized<br>Internet Agent</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#plans">Plans</a>
+      <a href="#offers">Offers</a>
+      <a href="#addons">Add-Ons</a>
+      <a href="#tv">TV</a>
+      <a href="#security">Security</a>
+      <a href="#hiring" class="hiring-link">Now Hiring</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#availability" class="btn btn-red">Check Availability</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<span id="top"></span>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="fiber"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <div class="eyebrow reveal">Frontier® &amp; EarthLink® Internet</div>
+      <h1 class="reveal">Find the <em>fastest internet</em> your home can get.</h1>
+      <p class="lead reveal">We're an Authorized Sales Agent for two leading fiber providers — plus ADT-monitored home security. Compare real plans, lock in current offers, and let a local agent handle the switch for you.</p>
+      <div class="hero-cta reveal">
+        <a href="#availability" class="btn btn-red">Check My Address →</a>
+        <a href="#plans" class="btn btn-ghost">Compare Plans</a>
+      </div>
+      <p class="hero-note reveal">Symmetrical fiber speeds · Unlimited data · Current new-customer offers</p>
+    </div>
+    <div class="hero-vis reveal">
+      <div class="speed-card">
+        <div class="sc-lab">Fiber speeds up to</div>
+        <div class="sc-num">7000</div>
+        <div class="sc-unit">Mbps download &amp; upload</div>
+        <div class="sc-bar"><div class="sc-fill"></div></div>
+        <div class="sc-sub"><span>Symmetrical speed</span><span>100% fiber</span></div>
+        <div class="sc-row"><span class="tick">✓</span><b>Two providers</b>&nbsp;— Frontier &amp; EarthLink</div>
+        <div class="sc-row"><span class="tick">✓</span><b>Unlimited</b>&nbsp;data options</div>
+        <div class="sc-row"><span class="tick">✓</span><b>Pro install</b>&nbsp;by a provider technician</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap trust-in">
+    <div class="trust-item"><span class="tk">✓</span>Symmetrical fiber speeds</div>
+    <div class="trust-item"><span class="tk">✓</span>Unlimited data options</div>
+    <div class="trust-item"><span class="tk">✓</span>Professional installation</div>
+    <div class="trust-item"><span class="tk">✓</span>Wi-Fi equipment available</div>
+    <div class="trust-item"><span class="tk">✓</span>Two trusted providers</div>
+  </div>
+</div>
+
+<!-- PLANS -->
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Internet Plans</div>
+      <h2>Pick your provider, then your speed</h2>
+      <p>Compare 100% fiber plans from Frontier and EarthLink. Switch the toggle to see each provider's lineup — your agent helps you choose the right fit.</p>
+    </div>
+    <div class="toggle reveal" id="provToggle">
+      <button data-prov="frontier" class="active">Frontier Fiber</button>
+      <button data-prov="earthlink">EarthLink</button>
+    </div>
+    <div data-grid="frontier">
+      <div class="plan-grid">
+        <div class="plan reveal"><div class="p-name">Fiber 200M</div><div class="p-tier">Frontier · Basic</div><div class="p-speed">200<small> / 200 Mbps</small></div><div class="p-price"><span class="amt">$29.99</span><span class="per">/mo*</span></div><div class="p-best">Lighter use — browsing, email, and a few devices.</div><ul><li>Symmetrical fiber speed</li><li>eero Wi-Fi router included</li><li>Unlimited data</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan reveal"><div class="p-name">Fiber 500M</div><div class="p-tier">Frontier · Basic</div><div class="p-speed">500<small> / 500 Mbps</small></div><div class="p-price"><span class="amt">$29.99</span><span class="per">/mo*</span></div><div class="p-best">Streaming, shopping, and social for a typical home.</div><ul><li>Symmetrical fiber speed</li><li>eero Wi-Fi router included</li><li>Unlimited data</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan feat reveal"><span class="ribbon">Most Popular</span><div class="p-name">Fiber 1 Gig</div><div class="p-tier">Frontier · Performance</div><div class="p-speed">1000<small> / 1000 Mbps</small></div><div class="p-price"><span class="amt">$49.99</span><span class="per">/mo*</span></div><div class="p-best">The sweet spot — work, stream, and game on many devices at once.</div><ul><li>Symmetrical fiber speed</li><li>eero Pro Wi-Fi router included</li><li>Unlimited data</li><li>Pro installation included</li></ul><a href="#availability" class="btn btn-red">Check Availability</a></div>
+        <div class="plan reveal"><div class="p-name">Fiber 2 Gig</div><div class="p-tier">Frontier · Performance</div><div class="p-speed">2000<small> / 2000 Mbps</small></div><div class="p-price"><span class="amt">$64.99</span><span class="per">/mo*</span></div><div class="p-best">Heavy households — 4K streaming and lots of simultaneous users.</div><ul><li>Symmetrical fiber speed</li><li>eero Pro Wi-Fi router included</li><li>Unlimited data</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan reveal"><div class="p-name">Fiber 5 Gig</div><div class="p-tier">Frontier · Power</div><div class="p-speed">5000<small> / 5000 Mbps</small></div><div class="p-price"><span class="amt">$89.99</span><span class="per">/mo*</span></div><div class="p-best">Power users — creators, large smart homes, demanding setups.</div><ul><li>Symmetrical fiber speed</li><li>eero Max Wi-Fi router included</li><li>Unlimited data</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan reveal"><div class="p-name">Fiber 7 Gig</div><div class="p-tier">Frontier · Power</div><div class="p-speed">7000<small> / 7000 Mbps</small></div><div class="p-price"><span class="amt">$109.99</span><span class="per">/mo*</span></div><div class="p-best">Top-tier, future-proof speed for the fastest available.</div><ul><li>Symmetrical fiber speed</li><li>Two eero Max Wi-Fi routers</li><li>Unlimited data</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+      </div>
+      <p class="fee-note">*Frontier pricing per month with enrollment in AutoPay ($10 discount). Plus taxes and surcharges. Frontier is a Verizon company. Speeds and availability vary by address. Pricing and offers subject to change.</p>
+    </div>
+    <div data-grid="earthlink" class="hidden">
+      <div class="plan-grid">
+        <div class="plan earth reveal"><div class="p-name">Fiber 100M</div><div class="p-tier">EarthLink · Fiber</div><div class="p-speed">100<small> Mbps</small></div><div class="p-price"><span class="amt">$39.95</span><span class="per">/mo</span></div><div class="p-xtra">+ $14.95/mo router rental</div><div class="p-best">An easy entry point for lighter internet households.</div><ul><li>100% fiber connection</li><li>Unlimited data</li><li>No long-term contract pressure</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan earth reveal"><div class="p-name">Fiber 300M</div><div class="p-tier">EarthLink · Fiber</div><div class="p-speed">300<small> Mbps</small></div><div class="p-price"><span class="amt">$49.95</span><span class="per">/mo</span></div><div class="p-xtra">+ $14.95/mo router rental</div><div class="p-best">Comfortable speed for everyday streaming and browsing.</div><ul><li>100% fiber connection</li><li>Unlimited data</li><li>Customizable plan options</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan earth feat reveal"><span class="ribbon">Lead Offer</span><div class="p-name">Internet Gig</div><div class="p-tier">EarthLink · Fiber</div><div class="p-speed">1000<small> / 1000 Mbps</small></div><div class="p-price"><span class="amt">$74.95</span><span class="per">/mo</span></div><div class="p-xtra">+ $14.95/mo router rental · intro pricing available</div><div class="p-best">1 Gbps symmetrical fiber — EarthLink's most popular plan.</div><ul><li>Symmetrical upload &amp; download</li><li>Unlimited data</li><li>Customizable plans</li><li>Intro pricing for new customers</li></ul><a href="#availability" class="btn btn-red">Check Availability</a></div>
+        <div class="plan earth reveal"><div class="p-name">Fiber 500M</div><div class="p-tier">EarthLink · Fiber</div><div class="p-speed">500<small> Mbps</small></div><div class="p-price"><span class="amt">$54.95</span><span class="per">/mo</span></div><div class="p-xtra">+ $14.95/mo router rental · intro pricing available</div><div class="p-best">A strong all-rounder for busy connected homes.</div><ul><li>100% fiber connection</li><li>Unlimited data</li><li>Intro pricing for new customers</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan earth reveal"><div class="p-name">Fiber 2 Gig</div><div class="p-tier">EarthLink · Fiber</div><div class="p-speed">2000<small> Mbps</small></div><div class="p-price"><span class="amt">$109.95</span><span class="per">/mo</span></div><div class="p-xtra">+ $14.95/mo router rental</div><div class="p-best">Multi-gig speed for heavy streaming and gaming homes.</div><ul><li>100% fiber connection</li><li>Unlimited data</li><li>Customizable plan options</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+        <div class="plan earth reveal"><div class="p-name">Fiber 5 Gig</div><div class="p-tier">EarthLink · Fiber</div><div class="p-speed">5000<small> Mbps</small></div><div class="p-price"><span class="amt">$149.95</span><span class="per">/mo</span></div><div class="p-xtra">+ $14.95/mo router rental</div><div class="p-best">EarthLink's fastest fiber tier for power users.</div><ul><li>100% fiber connection</li><li>Unlimited data</li><li>Customizable plan options</li></ul><a href="#availability" class="btn btn-ghost">Check Availability</a></div>
+      </div>
+      <div class="hl-card reveal">
+        <div><span class="hl-tag">Exclusive PerfectVision Offer</span><h3>EarthLink 5G Home Internet</h3><p>No fiber at your address yet? EarthLink's wireless 5G home internet is a great alternative — quick to set up, with truly unlimited data.</p><ul><li>True unlimited data</li><li>Speeds up to 300 Mbps</li><li>No contract required</li><li>Wireless — no fiber line needed</li></ul></div>
+        <div class="hl-price"><div class="amt">$59.95<span class="per">/mo</span></div><div class="sub">+ $14.95/mo modem rental</div></div>
+      </div>
+      <p class="fee-note">EarthLink plans require a $14.95/mo router (or modem) rental and a one-time $24.95 installation fee. A $79.95 processing &amp; handling fee is due at the point of sale. Speeds and availability vary by address; pricing and offers are subject to change and confirmed at the point of sale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers" style="background:#081120;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Current Offers</div><h2>New-customer deals worth switching for</h2><p>Promotions change often. Here's what's running now — your local authorized agent will confirm exactly what you qualify for at your address.</p></div>
+    <div class="prov-block reveal">
+      <div class="prov-label"><span class="pl-name">Frontier Fiber</span><span class="pl-pill fr">Current Offers</span><span class="pl-line"></span></div>
+      <div class="offer-grid">
+        <div class="offer fr"><div class="o-ic">2★</div><h3>2 Months "On Us"</h3><p>New Frontier Fiber customers get 2 months of internet free on the 1 Gig or 500M plan. eero equipment included — no Verizon mobile bundle required.</p><div class="o-when">Extended through June 30, 2026</div></div>
+        <div class="offer fr"><div class="o-ic">$400</div><h3>$400 Samsung Credit</h3><p>Choose Fiber 1 Gig or higher and get a $400 credit toward a select Samsung product ($799+) at Best Buy. One item per customer.</p><div class="o-when">New offer · began May 21, 2026</div></div>
+        <div class="offer fr"><div class="o-ic">FOX</div><h3>FOX One — 3 Months Free</h3><p>New Frontier Fiber customers with an eligible Verizon postpaid plan get 3 months of FOX One free — live sports, news, and FIFA World Cup 2026.</p><div class="o-when">Through September 2, 2026</div></div>
+        <div class="offer fr"><div class="o-ic">$15</div><h3>$15/mo Mobile + Home</h3><p>Pair Frontier Fiber with an eligible Verizon postpaid mobile plan for a $15/mo discount, plus access to Verizon Perks.</p><div class="o-when">Ongoing offer</div></div>
+      </div>
+    </div>
+    <div class="prov-block reveal">
+      <div class="prov-label"><span class="pl-name">EarthLink</span><span class="pl-pill el">Current Offers</span><span class="pl-line"></span></div>
+      <div class="offer-grid two">
+        <div class="offer el"><div class="o-ic">1G</div><h3>1 Gig &amp; 500M Intro Pricing</h3><p>New EarthLink customers get introductory pricing for the first 3 months: <b style="color:var(--ink)">1 Gig for $44.95/mo</b> (then $74.95), or <b style="color:var(--ink)">500M for $34.95/mo</b> (then $54.95). Plus $14.95/mo router rental.</p><div class="o-when">New customers · started May 1, 2026</div></div>
+        <div class="offer el"><div class="o-ic">5G</div><h3>5G Home Internet — $59.95/mo</h3><p>An exclusive PerfectVision offer: wireless 5G home internet with true unlimited data, speeds up to 300 Mbps, and no contract required. Plus $14.95/mo modem rental.</p><div class="o-when">Ongoing exclusive offer</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section id="addons">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Value-Added Services</div><h2>Make your connection do more</h2><p>Optional add-ons that strengthen coverage, security, and support. Each provider has its own lineup — mix and match with any plan.</p></div>
+    <div class="prov-block reveal">
+      <div class="prov-label"><span class="pl-name">Frontier Add-Ons</span><span class="pl-pill fr">Frontier</span><span class="pl-line"></span></div>
+      <div class="cards">
+        <div class="card fr"><div class="c-top"><h3>Unbreakable Wi-Fi</h3><span class="c-price">$25/mo</span></div><p>Automatic cellular backup keeps your home online during an unexpected fiber outage.</p><span class="tag-free">First month free</span></div>
+        <div class="card fr"><div class="c-top"><h3>Whole-Home Wi-Fi</h3><span class="c-price">$10/mo</span></div><p>Mesh extenders push a strong signal into every room — ending dead spots. Per extender.</p></div>
+        <div class="card fr"><div class="c-top"><h3>Wi-Fi Security</h3><span class="c-price">$6/mo</span></div><p>Essential protection for your home network against malicious sites, scams, and phishing.</p></div>
+        <div class="card fr"><div class="c-top"><h3>Wi-Fi Security Plus</h3><span class="c-price">$10/mo</span></div><p>Advanced security and parental controls, adding VPN privacy and a password manager.</p></div>
+      </div>
+    </div>
+    <div class="prov-block reveal">
+      <div class="prov-label"><span class="pl-name">EarthLink Add-Ons</span><span class="pl-pill el">EarthLink</span><span class="pl-line"></span></div>
+      <div class="cards">
+        <div class="card el"><div class="c-top"><h3>EarthLink Protect+</h3><span class="c-price">$9.95/mo</span></div><p>Home network security with Norton Secure VPN, parental controls, and a password manager.</p></div>
+        <div class="card el"><div class="c-top"><h3>LifeLock</h3><span class="c-price">$7.95/mo</span></div><p>Identity protection — personal-data alerts, credit monitoring, and identity restoration support.</p></div>
+        <div class="card el"><div class="c-top"><h3>EasyTech</h3><span class="c-price">$9.95/mo</span></div><p>24/7 unlimited tech support for troubleshooting and device setup &amp; integration.</p></div>
+      </div>
+    </div>
+    <p class="fee-note">Add-on pricing is per month and may be subject to tax. Availability and exact pricing are confirmed at the point of sale. Some services require provider-supplied equipment.</p>
+  </div>
+</section>
+
+<!-- TV -->
+<section id="tv" style="background:#081120;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">TV &amp; Streaming · Frontier</div><h2>Add entertainment to your fiber</h2><p>Frontier customers can bundle streaming with their fiber service — one provider, one bill, one powerful experience.</p></div>
+    <div class="tv-grid">
+      <div class="tv reveal"><h3>Netflix &amp; Pro Wi-Fi Bundle</h3><p style="color:var(--muted);font-size:14px">Entertainment and coverage in one simple package.</p><div class="tv-price">$32<span>/mo</span></div><ul><li>Netflix Premium — ad-free movies &amp; shows</li><li>Whole-Home Wi-Fi mesh coverage</li><li>Wi-Fi Security included</li><li>Billed alongside your Frontier service</li></ul><a href="#availability" class="btn btn-ghost" style="margin-top:auto;justify-content:center">Ask About This Bundle</a></div>
+      <div class="tv reveal"><h3>YouTube TV</h3><p style="color:var(--muted);font-size:14px">Cable-free live TV that pairs perfectly with fiber.</p><div class="tv-price">$82.99<span>/mo</span></div><ul><li>100+ channels of live sports, news &amp; shows</li><li>Unlimited DVR storage</li><li>Up to six accounts per household</li><li>No contracts — customer activation required</li></ul><a href="#availability" class="btn btn-ghost" style="margin-top:auto;justify-content:center">Ask About YouTube TV</a></div>
+    </div>
+    <div class="tv-extra reveal"><b>Bonus:</b> New Frontier Fiber customers with an eligible Verizon postpaid plan can also get <b>3 months of FOX One "on us"</b> — live sports, news, and major events including the FIFA World Cup 2026. Ask your agent about pairing it with the $15/mo Mobile + Home discount.</div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow" style="color:var(--blue-br)">Home Security</div><h2>Add ADT-monitored security to your home</h2><p>Bundle a professionally monitored ADT security system with your internet, offered through Direct Protection Security, an ADT Authorized Dealer.</p></div>
+    <div class="plan-grid">
+      <div class="plan adt reveal"><div class="p-name">Bronze</div><div class="p-tier">ADT-Monitored · Essential</div><div class="p-best">Core protection for your home's main entry points and a reliable first line of defense.</div><ul><li>24/7 professional ADT monitoring</li><li>Digital control panel / smart hub</li><li>Door &amp; window entry sensors</li><li>Motion detector</li><li>Mobile app — arm, disarm &amp; alerts</li><li>ADT yard sign &amp; window decals</li></ul><div class="sec-meta">Professional install · Custom-quoted for your home</div><a href="#availability" class="btn btn-ghost" data-adt="ADT Bronze">Add to My Quote</a></div>
+      <div class="plan adt feat reveal"><span class="ribbon">Most Popular</span><div class="p-name">Silver</div><div class="p-tier">ADT-Monitored · Plus</div><div class="p-best">Adds video so you can see what's happening and get smarter, clearer alerts.</div><ul><li>Everything in Bronze</li><li>HD security camera or video doorbell</li><li>Live video &amp; recorded clips in the app</li><li>Additional entry &amp; motion sensors</li><li>Smart alerts on motion or entry</li><li>24/7 professional ADT monitoring</li></ul><div class="sec-meta">Professional install · Custom-quoted for your home</div><a href="#availability" class="btn btn-red" data-adt="ADT Silver">Add to My Quote</a></div>
+      <div class="plan adt reveal"><div class="p-name">Gold</div><div class="p-tier">ADT-Monitored · Complete</div><div class="p-best">Full coverage with smart-home automation for the most connected, protected home.</div><ul><li>Everything in Silver</li><li>Indoor + outdoor camera coverage</li><li>Smart automation — locks, lighting &amp; thermostat</li><li>Expanded whole-home sensor coverage</li><li>Premium 24/7 monitoring &amp; priority support</li><li>Mobile app — full smart-home control</li></ul><div class="sec-meta">Professional install · Custom-quoted for your home</div><a href="#availability" class="btn btn-ghost" data-adt="ADT Gold">Add to My Quote</a></div>
+    </div>
+    <p class="fee-note">Home security packages are professionally monitored by ADT. Equipment, installation, monitoring rates, and any monitoring agreement or term length are quoted based on your home and confirmed at the point of sale. ADT® is a trademark of ADT LLC. Home security is offered through Direct Protection Security, an ADT Authorized Dealer.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head center reveal"><div class="eyebrow">How It Works</div><h2>From "hello" to high-speed in four steps</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="s-num"></div><h3>Check availability</h3><p>Share your address and we'll confirm which providers and speeds are live in your area.</p></div>
+      <div class="step reveal"><div class="s-num"></div><h3>Compare &amp; choose</h3><p>Your agent walks you through Frontier and EarthLink plans, offers, and add-ons.</p></div>
+      <div class="step reveal"><div class="s-num"></div><h3>Professional install</h3><p>A provider technician sets everything up — an adult 18+ just needs to be home.</p></div>
+      <div class="step reveal"><div class="s-num"></div><h3>Connect everything</h3><p>Enjoy fast, reliable internet across every device in the house.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== NOW HIRING ====================== -->
+<section class="hiring-hero" id="hiring">
+  <div class="hiring-pulse"><span class="pulse-dot"></span>Now Hiring</div>
+  <div class="wrap hiring-hero-in">
+    <div>
+      <div class="eyebrow gold reveal">Independent Sales Representative · 1099</div>
+      <h2 class="reveal">They cap your pay.<br>We don't cap <em>yours.</em></h2>
+      <p class="lead reveal">The big fiber companies have some of the worst employee reviews in the industry — commission clawbacks, missed installs that kill your paycheck, management that vanishes when numbers slip. We built Complete Home Today around fixing every one of those problems.</p>
+      <div class="hiring-hero-cta reveal">
+        <a href="#hire-apply" class="btn btn-gold">Apply Now →</a>
+        <a href="#why-us" class="btn btn-ghost">See the Difference</a>
+      </div>
+      <p class="hiring-hero-note reveal">1099 independent contractor · Commission per confirmed install · California territories · AB5 &amp; Borello compliant</p>
+    </div>
+    <div class="complaint-wall reveal">
+      <div class="cw-label">What reps say at other fiber companies</div>
+      <div class="cw-item">
+        <div class="cw-company">AT&amp;T</div>
+        <div class="cw-quote">"They change the commission structure after you're hired. What you were told at offer doesn't match what's on your check."</div>
+        <span class="cw-tag">Commission manipulation</span>
+      </div>
+      <div class="cw-item">
+        <div class="cw-company">Frontier</div>
+        <div class="cw-quote">"Install and drop teams cancel roughly 40% of sold accounts. Reps lose commission on deals they didn't lose."</div>
+        <span class="cw-tag">Install drop chargebacks</span>
+      </div>
+      <div class="cw-item">
+        <div class="cw-company">Xfinity / Comcast</div>
+        <div class="cw-quote">"Metrics so unrealistic that hitting four out of five targets means nothing — one miss wipes the entire scorecard."</div>
+        <span class="cw-tag">Impossible metrics</span>
+      </div>
+      <div class="cw-item">
+        <div class="cw-company">Spectrum</div>
+        <div class="cw-quote">"Too much internal politics. Advancement is about relationships, not results."</div>
+        <span class="cw-tag">Politics over performance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" style="background:#081120;border-top:1px solid rgba(245,166,35,.12);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal"><div class="eyebrow gold">Why Complete Home Today</div><h2>The six things other companies get wrong</h2><p>Every policy below is a direct response to a documented industry failure.</p></div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="wc-icon">📋</div><h3>Commission you can count on</h3><p>Your rate card is in your IC agreement. It doesn't change mid-quarter. What you're told at signing is what you're paid.</p><div class="wc-vs"><b>Industry pattern:</b> Rate cards revised after hire — often without notice — to shift more risk onto reps.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">🚪</div><h3>You control your schedule</h3><p>As a 1099 independent contractor, you set your own hours and territory approach. No mandatory stand-ups, no mandatory routes.</p><div class="wc-vs"><b>Industry pattern:</b> W-2 reps micromanaged on daily knock counts regardless of results.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">💰</div><h3>No artificial earnings ceiling</h3><p>Stack Frontier Fiber and ADT on the same install and earn on both. More products, more opportunity per door — no cap.</p><div class="wc-vs"><b>Industry pattern:</b> Single-product reps limited by what the company sells, not what the customer needs.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">📄</div><h3>Everything in writing</h3><p>Your IC agreement covers commission structure, territory, chargeback rules, and payment timelines. Verbal promises don't exist here — the document does.</p><div class="wc-vs"><b>Industry pattern:</b> Verbal commitments to reps that don't survive the first billing cycle.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">🎯</div><h3>Real products that close doors</h3><p>2 months free internet, $400 Samsung Best Buy credit, FOX One — these are today's actual offers. Strong promos mean more yeses per door.</p><div class="wc-vs"><b>Industry pattern:</b> Reps sent out with expired offers or products customers don't recognize.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">📈</div><h3>Training that builds earners</h3><p>D2DU 2.0 methodology — Sam Taggart's proven 5-step pitch, Feel/Felt/Found objection handling, and the Pullback Close. You're not thrown at a door unarmed.</p><div class="wc-vs"><b>Industry pattern:</b> "Figure it out as you go" onboarding with no pitch framework and no coaching on the way up.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITOR TABLE -->
+<section style="padding:84px 0;background:#081120;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow gold">Industry Employment Complaints</div><h2>What fiber company employees actually report</h2><p>Sourced from Glassdoor, Indeed, and BBB reviews. These are industry-wide patterns — not outliers.</p></div>
+    <div class="comp-table-wrap reveal">
+      <table class="comp-table">
+        <thead><tr><th>Company</th><th>Top Employee Complaint</th><th>Tags</th></tr></thead>
+        <tbody>
+          <tr><td>AT&amp;T</td><td>Managers pick favorites and pay new hires more than tenured employees. Base pay unworkable for anyone with a family. Company ignores reps who aren't top producers.</td><td><span class="pain pain-red">Pay inequity</span><span class="pain pain-yellow">Favoritism</span></td></tr>
+          <tr><td>Frontier</td><td>Commission structures changed shortly after hire. Upper management rated as poor with no training for managers. Install teams cancel sold accounts, costing reps earned commission.</td><td><span class="pain pain-red">Commission clawback</span><span class="pain pain-yellow">Micromanagement</span></td></tr>
+          <tr><td>Xfinity / Comcast</td><td>Constantly changing processes, no tools to do the job, metrics so unrealistic that hitting 4 of 5 targets still fails the scorecard. Commission described as uncompetitive.</td><td><span class="pain pain-red">Impossible metrics</span><span class="pain pain-red">Low commission</span></td></tr>
+          <tr><td>Spectrum</td><td>Internal politics determine advancement, not results. Long-tenured employees stagnate with no real upward mobility unless they move into corporate tracks.</td><td><span class="pain pain-yellow">Politics</span><span class="pain pain-yellow">No growth</span></td></tr>
+          <tr><td>Windstream / Kinetic</td><td>1.4-star average rating. Long hold times, can't reach management, frequent outages the rep takes blame for, billing errors blamed on frontline staff.</td><td><span class="pain pain-red">No support</span><span class="pain pain-yellow">Reputation damage</span></td></tr>
+          <tr><td>Clearwave Fiber</td><td>Promised uniforms and tools never delivered. No performance reviews in 9+ months. Pay-per-job model pushes techs to rush installs, creating rework and chargeback risk.</td><td><span class="pain pain-red">Broken promises</span><span class="pain pain-red">Chargeback risk</span></td></tr>
+          <tr><td>Google Fiber / GFiber</td><td>Great onboarding followed immediately by PIPs. Corporate leaders described as cold and non-supportive. Constant process changes with no real training infrastructure.</td><td><span class="pain pain-red">PIP culture</span><span class="pain pain-yellow">No stability</span></td></tr>
+          <tr><td>Metronet</td><td>Verbal commitments never documented. Promises made on calls don't appear in the system. Reps have no way to enforce what was agreed with customers or management.</td><td><span class="pain pain-yellow">No accountability</span><span class="pain pain-yellow">Verbal promises</span></td></tr>
+          <tr><td>Optimum / Altice</td><td>Prices raised on existing customers mid-employment to offset new-customer promos. Reps fielding retention calls with no tools or authority to offer real solutions.</td><td><span class="pain pain-red">Retention failure</span><span class="pain pain-yellow">No tools</span></td></tr>
+          <tr><td>Cox</td><td>Reps left to handle fallout from billing errors, duplicate accounts, and misdirected payments created by the company's own back-end systems — with no escalation path.</td><td><span class="pain pain-red">System failures</span><span class="pain pain-yellow">Rep accountability</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="earn-vis reveal">
+      <h3>What your week could look like</h3>
+      <div class="ev-sub">Estimated weekly earnings at different production levels — Frontier Fiber + ADT combined</div>
+      <div class="earn-rows">
+        <div class="earn-row"><div class="er-label">Getting started</div><div class="er-bar-wrap"><div class="er-bar" style="width:22%"></div></div><div class="er-amt">~$500–$1K</div></div>
+        <div class="earn-row"><div class="er-label">Solid producer</div><div class="er-bar-wrap"><div class="er-bar" style="width:55%"></div></div><div class="er-amt">~$1.5K–$2.5K</div></div>
+        <div class="earn-row"><div class="er-label">Top performer</div><div class="er-bar-wrap"><div class="er-bar" style="width:100%"></div></div><div class="er-amt">~$3K+</div></div>
+      </div>
+      <div class="earn-note">Estimates based on general activity ranges. Commission paid per confirmed install. Your results depend entirely on your effort and close rate. This is a 1099 commission-only position — no base salary or guaranteed earnings.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO APPLY -->
+<section id="hire-how" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal"><div class="eyebrow gold">How to Join</div><h2>Four steps from application to first door</h2></div>
+    <div class="apply-steps">
+      <div class="apply-step reveal"><div class="as-num"></div><h3>Submit your application</h3><p>Fill out the form below with your contact info and territory preference. Takes two minutes.</p></div>
+      <div class="apply-step reveal"><div class="as-num"></div><h3>Quick phone screen</h3><p>A team leader calls to walk you through the role, answer your questions, and confirm it's a fit.</p></div>
+      <div class="apply-step reveal"><div class="as-num"></div><h3>Sign your IC agreement</h3><p>Review and sign your 1099 Independent Contractor agreement — everything in writing before day one.</p></div>
+      <div class="apply-step reveal"><div class="as-num"></div><h3>Train and hit the field</h3><p>D2DU 2.0 pitch training, product walkthrough, and territory assignment. Then you're earning.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HIRING FORM -->
+<section id="hire-apply" style="background:#081120;border-top:1px solid rgba(245,166,35,.15);border-bottom:1px solid var(--line);padding:84px 0">
+  <div class="wrap hire-avail-in">
+    <div class="hire-copy reveal">
+      <div class="eyebrow gold">Apply Now</div>
+      <h2>Start building your own paycheck</h2>
+      <p>This is a 1099 commission-only role. If you're self-motivated and want to control your income without a ceiling — fill out the form and a team leader will reach out within one business day.</p>
+      <div class="hc-row"><span class="tick-gold">✓</span>Uncapped commission per confirmed install</div>
+      <div class="hc-row"><span class="tick-gold">✓</span>Frontier Fiber + ADT — two products per door</div>
+      <div class="hc-row"><span class="tick-gold">✓</span>D2DU 2.0 pitch training provided</div>
+      <div class="hc-row"><span class="tick-gold">✓</span>Everything in your IC agreement — nothing verbal</div>
+      <div class="hc-row"><span class="tick-gold">✓</span>AB5 &amp; Borello compliant · California territories</div>
+      <div style="margin-top:22px;font-size:13px;color:var(--faint)">Prefer to call? Reach us at <a href="tel:+14089094484" style="color:var(--ink);font-weight:600">(408) 909-4484</a> or <a href="mailto:Completehometodayllc@gmail.com" style="color:var(--ink);font-weight:600">Completehometodayllc@gmail.com</a></div>
+    </div>
+    <div class="hire-form-card reveal">
+      <form id="hireForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="94f15b07-ca25-44d8-8413-6933fc25533a">
+        <input type="hidden" name="from_name" value="Complete Home Today — Job Applicant">
+        <input type="hidden" name="subject" id="hSubject" value="New Job Application — Complete Home Today">
+        <input type="hidden" name="replyto" id="hReplyto" value="">
+        <input type="hidden" name="redirect" id="hRedirect" value="">
+        <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="form-grid">
+          <div class="field"><label for="h-name">Full name *</label><input id="h-name" name="name" type="text" placeholder="Jordan Rivera" required></div>
+          <div class="field"><label for="h-phone">Phone *</label><input id="h-phone" name="phone" type="tel" placeholder="(000) 000-0000" required></div>
+          <div class="field full"><label for="h-email">Email *</label><input id="h-email" name="email" type="email" placeholder="you@email.com" required></div>
+          <div class="field"><label for="h-city">City you'd work in *</label><input id="h-city" name="city" type="text" placeholder="Gilroy, Salinas, Monterey…" required></div>
+          <div class="field"><label for="h-exp">Sales experience</label><select id="h-exp" name="experience"><option value="">Select</option><option>None — ready to learn</option><option>Less than 1 year</option><option>1–3 years</option><option>3+ years D2D sales</option><option>Former fiber/telecom rep</option><option>Former security sales rep</option></select></div>
+          <div class="field"><label for="h-transport">Reliable transportation?</label><select id="h-transport" name="transportation"><option value="Yes">Yes</option><option value="No">No</option></select></div>
+          <div class="field"><label for="h-avail">Available to start</label><select id="h-avail" name="availability"><option>Immediately</option><option>Within 1 week</option><option>Within 2 weeks</option><option>More than 2 weeks</option></select></div>
+          <div class="field"><label for="h-ref">How did you hear about us?</label><select id="h-ref" name="referral_source"><option value="">Select</option><option>LinkedIn</option><option>ZipRecruiter</option><option>OfferUp</option><option>Facebook</option><option>Word of mouth</option><option>Other</option></select></div>
+          <div class="field full"><label for="h-refname">Referred by (if applicable)</label><input id="h-refname" name="referred_by" type="text" placeholder="Rep or team member's name"><span class="field-note">If someone on the team referred you, their name here ensures they get credit.</span></div>
+          <div class="field full"><label for="h-note">Anything else you want us to know?</label><textarea id="h-note" name="notes" placeholder="Optional — tell us about yourself, your goals, or any questions you have."></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-gold" id="hSubmitBtn" style="width:100%;justify-content:center;margin-top:18px;font-size:15.5px;padding:15px">Submit Application →</button>
+        <p class="form-err" id="hFormErr"></p>
+        <p class="form-fine">This is an inquiry to join Complete Home Today as a 1099 independent contractor. Submitting this form does not guarantee a position or constitute an employment offer. All contractor engagements are governed by a written Independent Contractor Agreement and are structured in compliance with California AB5 and the Borello multi-factor test.</p>
+      </form>
+      <div class="form-done-hire" id="hFormDone">
+        <div class="ck">✓</div>
+        <h3>Application received</h3>
+        <p>A team leader will reach out within one business day to talk through the role and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIRING FAQ -->
+<section style="border-top:1px solid var(--line);padding:84px 0">
+  <div class="wrap">
+    <div class="sec-head center reveal"><div class="eyebrow gold">Rep FAQ</div><h2>Questions about joining</h2></div>
+    <div class="faq-list">
+      <details class="gold-faq reveal"><summary>Is this a W-2 job or 1099? <span class="pm">+</span></summary><div class="ans">This is a 1099 independent contractor role. You are not an employee of Complete Home Today LLC. There is no base salary, no guaranteed hours, and no employee benefits. You are responsible for your own taxes, transportation, and expenses. The engagement is structured in compliance with California AB5 (Labor Code §2775 et seq.) and the Borello multi-factor test — you control your own schedule, routes, and sales approach.</div></details>
+      <details class="gold-faq reveal"><summary>What products will I sell? <span class="pm">+</span></summary><div class="ans">Frontier Fiber Internet (200M through 7 Gig, plus EarthLink plans) and ADT-monitored home security through Direct Protection Security. Selling both on the same visit maximizes your per-door earnings. Current Frontier promos include 2 months free internet, a $400 Samsung Best Buy credit, and FOX One — strong tools that make the pitch easier.</div></details>
+      <details class="gold-faq reveal"><summary>How and when do I get paid? <span class="pm">+</span></summary><div class="ans">Commission is earned per confirmed installation — not per pitch, not per signature. Payment timelines and the full rate structure are outlined in your IC agreement before you sign. Nothing is verbal.</div></details>
+      <details class="gold-faq reveal"><summary>What if an install gets cancelled after I close the deal? <span class="pm">+</span></summary><div class="ans">Chargeback rules are defined in your IC agreement. You will know exactly under what conditions a commission is clawed back before you ever close your first deal. No surprises after the fact.</div></details>
+      <details class="gold-faq reveal"><summary>Do I need prior sales experience? <span class="pm">+</span></summary><div class="ans">No. We provide full D2DU 2.0 pitch training — a proven door-to-door methodology that covers the 5-step pitch, Feel/Felt/Found objection handling, and the Pullback Close. Prior experience helps, but what matters most is a self-starter mindset and willingness to put in the reps.</div></details>
+      <details class="gold-faq reveal"><summary>What territories are available? <span class="pm">+</span></summary><div class="ans">We currently operate in California markets including Gilroy, Watsonville, Salinas, Monterey, and surrounding ZIP codes. Territory assignment is discussed during your phone screen based on your location and availability.</div></details>
+      <details class="gold-faq reveal"><summary>Is this compliant with California AB5? <span class="pm">+</span></summary><div class="ans">Yes. The IC agreement is drafted in compliance with California Labor Code §2775 et seq. (AB5) and the Borello multi-factor test. As an independent contractor, you are free to set your own schedule, choose your own routes, and control your own sales approach. You are not subject to behavioral control by the Company.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY FORM -->
+<section class="avail" id="availability">
+  <div class="wrap avail-in">
+    <div class="avail-copy reveal">
+      <div class="eyebrow">Check Availability</div>
+      <h2>See what's available at your address</h2>
+      <p>Fiber availability varies street by street, and not every provider reaches every home. Share your details and a local Authorized Sales Agent will confirm your options and current offers.</p>
+      <div class="ac-row"><span class="tick">✓</span> No obligation — it's just a quick check</div>
+      <div class="ac-row"><span class="tick">✓</span> Real pricing and offers for your address</div>
+      <div class="ac-row"><span class="tick">✓</span> Help comparing Frontier and EarthLink</div>
+      <div class="ac-row" style="margin-top:22px;font-size:13px;color:var(--faint)">Prefer to talk now? Call <a href="tel:+14089094484" style="color:var(--ink);font-weight:600">(408) 909-4484</a> or email <a href="mailto:Completehometodayllc@gmail.com" style="color:var(--ink);font-weight:600">Completehometodayllc@gmail.com</a>.</div>
+    </div>
+    <div class="form-card reveal">
+      <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="94f15b07-ca25-44d8-8413-6933fc25533a">
+        <input type="hidden" name="from_name" value="Complete Home Today Website">
+        <input type="hidden" name="subject" id="w3fSubject" value="New Website Lead — Complete Home Today">
+        <input type="hidden" name="replyto" id="w3fReplyto" value="">
+        <input type="hidden" name="redirect" id="w3fRedirect" value="">
+        <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="form-grid">
+          <div class="field full"><label for="f-name">Full name *</label><input id="f-name" name="name" type="text" placeholder="Jordan Rivera" required></div>
+          <div class="field full"><label for="f-address">Service address *</label><input id="f-address" name="address" type="text" placeholder="123 Main St, City, CA" required></div>
+          <div class="field"><label for="f-zip">ZIP code *</label><input id="f-zip" name="zip" type="text" inputmode="numeric" placeholder="92562" required></div>
+          <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="phone" type="tel" placeholder="(000) 000-0000" required></div>
+          <div class="field full"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" placeholder="you@email.com" required></div>
+          <div class="field"><label for="f-prov">Provider interest</label><select id="f-prov" name="provider"><option value="">No preference</option><option>Frontier Fiber</option><option>EarthLink</option><option>Whatever's fastest</option></select></div>
+          <div class="field"><label for="f-plan">Speed of interest</label><select id="f-plan" name="plan"><option value="">Not sure yet</option><option>Up to 500 Mbps</option><option>1 Gig</option><option>2 Gig or higher</option><option>5G Home Internet (wireless)</option><option>TV / Streaming bundle</option></select></div>
+          <div class="field"><label for="f-vz">Verizon mobile customer?</label><select id="f-vz" name="has_verizon"><option value="">Select</option><option>Yes — postpaid</option><option>Yes — prepaid</option><option>No</option></select></div>
+          <div class="field"><label for="f-time">Best time to reach you</label><select id="f-time" name="best_time"><option value="">Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          <div class="field full"><label for="f-adt">Add a home security package?</label><select id="f-adt" name="adt_package"><option value="">No — internet only</option><option>ADT Bronze</option><option>ADT Silver</option><option>ADT Gold</option><option>Not sure — tell me about security</option></select></div>
+          <div class="field full"><label for="f-found">How did you find us?</label><select id="f-found" name="how_found"><option value="">Select one</option><option>A rep came to my door</option><option>Referred by a friend or family</option><option>Flyer or mailer</option><option>Online search</option><option>Social media</option><option>Other</option></select></div>
+          <div class="field full"><label for="f-refname">Rep or referral name</label><input id="f-refname" name="referral_name" type="text" placeholder="Their name"><span class="field-note">If a rep visited you or someone referred you, please type their name so we can credit them.</span></div>
+        </div>
+        <button type="submit" class="btn btn-red" id="submitBtn" style="width:100%;justify-content:center;margin-top:18px;font-size:15.5px;padding:15px">Check My Availability</button>
+        <p class="form-err" id="formErr"></p>
+        <p class="form-fine">By submitting, you agree to be contacted by an Authorized Sales Agent about Frontier, EarthLink, and ADT-monitored security services by phone, text, or email. Consent is not a condition of purchase. Submitting this form is a request to check availability — it does not place an order or guarantee service or pricing.</p>
+      </form>
+      <div class="form-done" id="formDone">
+        <div class="ck">✓</div>
+        <h3>Thanks — we've got your request</h3>
+        <p>A local Authorized Sales Agent will reach out shortly to confirm availability and current offers for your address.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal"><div class="eyebrow">Questions</div><h2>Good to know</h2></div>
+    <div class="faq-list">
+      <details class="reveal"><summary>Are you Frontier or EarthLink? <span class="pm">+</span></summary><div class="ans">Neither. Complete Home Today is an independent, authorized sales agent for both Frontier and EarthLink. We help you compare and sign up for service, while the provider you choose handles the network, billing, installation, and support.</div></details>
+      <details class="reveal"><summary>Which providers and speeds can I get? <span class="pm">+</span></summary><div class="ans">We offer Frontier Fiber (200 Mbps up to 7 Gig) and EarthLink (100 Mbps up to 5 Gig fiber, plus a wireless 5G Home Internet option up to 300 Mbps). The exact providers and speeds available depend on your address — that's what the availability check confirms.</div></details>
+      <details class="reveal"><summary>What are the current offers? <span class="pm">+</span></summary><div class="ans">Frontier is running 2 Months "On Us" (1 Gig or 500M, through June 30, 2026), a $400 Samsung credit on 1 Gig+, 3 months of FOX One for eligible Verizon mobile customers, and a $15/mo Mobile + Home discount. EarthLink offers introductory pricing on its 1 Gig and 500M fiber plans and a $59.95/mo 5G Home Internet plan. Offers change often — your agent confirms current details.</div></details>
+      <details class="reveal"><summary>What fees should I expect? <span class="pm">+</span></summary><div class="ans">Frontier prices shown reflect a $10 AutoPay discount and don't include taxes and surcharges. EarthLink plans include a $14.95/mo router rental, a one-time $24.95 install fee, and a $79.95 processing and handling fee due at signup. Your agent reviews every fee before you commit.</div></details>
+      <details class="reveal"><summary>Is there a contract? <span class="pm">+</span></summary><div class="ans">It depends on the plan. Some Frontier promotions include a 12-month term, and an early termination fee may apply if service is cancelled within that period. EarthLink's 5G Home Internet requires no contract. Your agent will explain the terms for whichever plan you choose.</div></details>
+      <details class="reveal"><summary>Do I need Verizon mobile service? <span class="pm">+</span></summary><div class="ans">No. Frontier and EarthLink internet work fully on their own. If you do have an eligible Verizon postpaid mobile plan, you may unlock extra Frontier savings — the $15/mo Mobile + Home discount, Verizon Perks, and the FOX One offer. It's a bonus, not a requirement.</div></details>
+      <details class="reveal"><summary>Do you offer home security? <span class="pm">+</span></summary><div class="ans">Yes. We offer ADT-monitored home security through Direct Protection Security, an ADT Authorized Dealer, with three packages — Bronze, Silver, and Gold. Equipment and 24/7 monitoring are quoted for your home; just pick a package on the availability form and your agent handles the rest.</div></details>
+      <details class="reveal"><summary>Is the pricing on this site final? <span class="pm">+</span></summary><div class="ans">Offers and pricing change periodically and vary by address. Your authorized agent confirms exact, current pricing and terms for your home at the point of sale.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="logo"><span class="logo-mark">COMPLETE<span class="dot">·</span>HOME</span><span class="logo-tag">Authorized<br>Internet Agent</span></div>
+        <p>An independent Authorized Sales Agent helping households compare and switch to high-speed internet from Frontier and EarthLink — and helping self-motivated sales professionals build their own income.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#plans">Plans</a><a href="#offers">Current Offers</a><a href="#addons">Add-Ons</a><a href="#tv">TV &amp; Streaming</a><a href="#security">Home Security</a><a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Work With Us</h4>
+        <a href="#hiring">Now Hiring</a><a href="#hire-apply">Apply Online</a>
+        <h4 style="margin-top:18px">Get in touch</h4>
+        <a href="#availability">Check Availability</a><a href="tel:+14089094484">(408) 909-4484</a><a href="mailto:Completehometodayllc@gmail.com">Completehometodayllc@gmail.com</a><span>Serving California</span>
+      </div>
+    </div>
+    <div class="disclosure">
+      <b>Authorized Sales Agent Disclosure.</b> Complete Home Today LLC is an independent Authorized Sales Agent for Frontier Communications and EarthLink, and offers ADT-monitored home security through Direct Protection Security, an ADT Authorized Dealer. It is not Frontier, EarthLink, or ADT. Frontier® (a Verizon company), EarthLink®, ADT®, and related logos and marks are trademarks of their respective owners. &nbsp;
+      <b>Pricing &amp; offers.</b> Advertised Frontier monthly prices reflect enrollment in AutoPay (a $10 discount) and exclude taxes, surcharges, and fees. EarthLink plans require a separate monthly router/modem rental ($14.95/mo), a one-time installation fee ($24.95), and a processing &amp; handling fee ($79.95) due at the point of sale. Home security packages are professionally monitored by ADT; equipment, installation, monitoring rates, and any monitoring agreement or term length are quoted per home. Service, speeds, equipment, and promotional offers vary by address and are subject to change without notice; final pricing and offers are confirmed at the point of sale. Internet speeds are not guaranteed and may vary. Some promotions require a 12-month term and may carry an early termination fee. &nbsp;
+      <b>Contractor Disclosure.</b> Sales representatives engaged by Complete Home Today LLC operate as independent contractors under 1099 agreements structured in compliance with California Labor Code §2775 et seq. (AB5) and the Borello multi-factor test. Independent contractor status does not guarantee any minimum earnings. Commission is earned per confirmed installation and is subject to chargeback as defined in the applicable IC agreement. &nbsp;
+      <b>Licensing.</b> Home security in California is sold and installed under Alarm Company Operator (ACO) License No. 6446, Direct Protection Security, and Alarm Company Employee (ACE) License No. 552544, issued by the California Bureau of Security &amp; Investigative Services (BSIS).
+      <div class="copyr">© <span id="yr"></span> Complete Home Today. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+// mobile nav
+var burger = document.getElementById("burger");
+var navLinks = document.getElementById("navLinks");
+burger.addEventListener("click", function(){ navLinks.classList.toggle("open"); });
+navLinks.addEventListener("click", function(e){ if(e.target.tagName==="A") navLinks.classList.remove("open"); });
+
+// provider toggle
+var toggle = document.getElementById("provToggle");
+toggle.addEventListener("click", function(e){
+  var btn = e.target.closest("button"); if(!btn) return;
+  var prov = btn.getAttribute("data-prov");
+  toggle.querySelectorAll("button").forEach(function(b){ b.classList.toggle("active", b===btn); });
+  document.querySelectorAll("[data-grid]").forEach(function(g){ g.classList.toggle("hidden", g.getAttribute("data-grid")!==prov); });
+});
+
+// scroll reveal
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+},{threshold:.1});
+document.querySelectorAll(".reveal").forEach(function(el,i){
+  el.style.transitionDelay = (Math.min(i%5,4)*0.07)+"s"; io.observe(el);
+});
+
+// ADT pre-select
+document.querySelectorAll("[data-adt]").forEach(function(a){
+  a.addEventListener("click", function(){ var s=document.getElementById("f-adt"); if(s) s.value=a.getAttribute("data-adt"); });
+});
+
+// customer lead form
+var form = document.getElementById("leadForm");
+var done = document.getElementById("formDone");
+var submitBtn = document.getElementById("submitBtn");
+var errBox = document.getElementById("formErr");
+var rd = document.getElementById("w3fRedirect");
+if(rd) rd.value = location.origin+location.pathname+"?submitted=1#availability";
+if(location.search.indexOf("submitted=1")!==-1){
+  if(done){ form.style.display="none"; done.style.display="block"; }
+  if(window.history&&history.replaceState) history.replaceState({},"",location.pathname+"#availability");
+}
+form.addEventListener("submit",function(e){
+  var req=["name","address","zip","phone","email"]; var ok=true;
+  req.forEach(function(n){ var el=form.elements[n]; if(!el.value.trim()){ ok=false; el.style.borderColor="var(--red)"; } else{ el.style.borderColor=""; } });
+  if(!ok){ e.preventDefault(); if(errBox){ errBox.textContent="⚠ Please fill in the highlighted fields and try again."; errBox.style.display="block"; } return; }
+  if(form.elements["botcheck"]&&form.elements["botcheck"].checked){ e.preventDefault(); form.style.display="none"; done.style.display="block"; return; }
+  document.getElementById("w3fSubject").value="New Website Lead — "+form.elements["name"].value.trim()+" ("+form.elements["zip"].value.trim()+")";
+  document.getElementById("w3fReplyto").value=form.elements["email"].value.trim();
+  if(errBox) errBox.style.display="none";
+  submitBtn.textContent="Sending…";
+});
+
+// hiring form
+var hForm = document.getElementById("hireForm");
+var hDone = document.getElementById("hFormDone");
+var hBtn  = document.getElementById("hSubmitBtn");
+var hErr  = document.getElementById("hFormErr");
+var hrd = document.getElementById("hRedirect");
+if(hrd) hrd.value = location.origin+location.pathname+"?hired=1#hire-apply";
+if(location.search.indexOf("hired=1")!==-1){
+  if(hDone){ hForm.style.display="none"; hDone.style.display="block"; }
+  if(window.history&&history.replaceState) history.replaceState({},"",location.pathname+"#hire-apply");
+}
+hForm.addEventListener("submit",function(e){
+  var req=["name","phone","email","city"]; var ok=true;
+  req.forEach(function(n){ var el=hForm.elements[n]; if(!el||!el.value.trim()){ ok=false; if(el) el.style.borderColor="var(--gold)"; } else{ el.style.borderColor=""; } });
+  if(!ok){ e.preventDefault(); if(hErr){ hErr.textContent="⚠ Please fill in the highlighted fields and try again."; hErr.style.display="block"; } return; }
+  if(hForm.elements["botcheck"]&&hForm.elements["botcheck"].checked){ e.preventDefault(); hForm.style.display="none"; hDone.style.display="block"; return; }
+  document.getElementById("hSubject").value="New Job Application — "+hForm.elements["name"].value.trim()+" ("+(hForm.elements["city"]?hForm.elements["city"].value.trim():"")+")";
+  document.getElementById("hReplyto").value=hForm.elements["email"].value.trim();
+  if(hErr) hErr.style.display="none";
+  hBtn.textContent="Submitting…";
+});
+</script>
+</body>
+</html>
