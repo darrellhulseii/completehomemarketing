@@ -376,6 +376,18 @@ body.show-hiring .burger{display:none}
   .pulse-dot{animation:none}
   .sc-fill{animation:none;width:100%}
 }
+/* hiring: W-2 research stats */
+.stat-intro{max-width:660px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.stat-card{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:24px 22px;transition:.2s}
+.stat-card:hover{border-color:var(--line2);transform:translateY(-2px)}
+.stat-card .stat-fig{font-family:'Archivo',sans-serif;font-weight:900;font-size:42px;line-height:1;letter-spacing:-.02em;color:var(--gold-br)}
+.stat-card .stat-claim{font-size:14px;font-weight:600;color:var(--ink);line-height:1.45;margin-top:13px}
+.stat-card .stat-src{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:14px;padding-top:13px;border-top:1px solid var(--line)}
+.stat-note{margin-top:26px;font-size:14.5px;color:var(--muted);line-height:1.6;max-width:780px}
+.stat-note b{color:var(--gold-br);font-weight:700}
+@media(max-width:820px){.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.stat-grid{grid-template-columns:1fr}.stat-card .stat-fig{font-size:38px}}
 </style>
 </head>
 <body>
@@ -708,6 +720,22 @@ body.show-hiring .burger{display:none}
         <div class="cw-quote">"Advancement is about relationships, not results — too much internal politics."</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- W-2 RESEARCH -->
+<section style="background:var(--navy);padding:84px 0">
+  <div class="wrap">
+    <div class="sec-head reveal stat-intro"><div class="eyebrow gold">What the research says</div><h2>Why people are walking away from the W-2 job</h2><p>Not our opinion — findings from the most-cited workplace studies of the past few years: Pew Research Center, Gallup, and MIT Sloan Management Review.</p></div>
+    <div class="stat-grid">
+      <div class="stat-card reveal"><div class="stat-fig">31%</div><div class="stat-claim">Only 31% of U.S. workers are engaged at their job — a 10-year low. The rest are coasting or checked out.</div><span class="stat-src">Gallup · 2024</span></div>
+      <div class="stat-card reveal"><div class="stat-fig">10&times;</div><div class="stat-claim">A toxic workplace culture predicts who quits 10.4&times; more powerfully than pay does — the single biggest driver of turnover.</div><span class="stat-src">MIT Sloan Management Review · 2022</span></div>
+      <div class="stat-card reveal"><div class="stat-fig">63%</div><div class="stat-claim">63% who quit blamed low pay — and the same share blamed having no real path to advance.</div><span class="stat-src">Pew Research Center · 2022</span></div>
+      <div class="stat-card reveal"><div class="stat-fig">57%</div><div class="stat-claim">57% left their last job because they felt disrespected at work.</div><span class="stat-src">Pew Research Center · 2022</span></div>
+      <div class="stat-card reveal"><div class="stat-fig">70%</div><div class="stat-claim">About 70% of how engaged a team is traces back to one person — the manager you happen to be assigned.</div><span class="stat-src">Gallup</span></div>
+      <div class="stat-card reveal"><div class="stat-fig">45%</div><div class="stat-claim">45% walked away over having no say in when they work — no control of their own hours.</div><span class="stat-src">Pew Research Center · 2022</span></div>
+    </div>
+    <p class="stat-note reveal">The pattern is consistent: <b>capped pay, a boss who decides your future, no flexibility, and feeling like a number.</b> Independent contracting isn't the right move for everyone — but if those are the reasons you're looking, that's exactly what the Complete Home Today model is built to fix.</p>
   </div>
 </section>
 
