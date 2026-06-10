@@ -211,12 +211,13 @@ section{padding:84px 0}
 .hiring-hero-note{font-size:12.5px;color:#5a7a56}
 
 /* complaint wall */
-.complaint-wall{background:rgba(0,0,0,.35);border:1px solid rgba(245,166,35,.15);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:11px}
-.cw-label{font-family:'Archivo',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-br);margin-bottom:4px}
-.cw-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:12px 14px}
-.cw-item .cw-company{font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
-.cw-item .cw-quote{font-size:13px;color:#8fa09e;line-height:1.45;font-style:italic}
-.cw-item .cw-tag{display:inline-block;margin-top:7px;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#e05252;background:rgba(224,82,82,.12);border:1px solid rgba(224,82,82,.2);border-radius:5px;padding:2px 7px}
+.complaint-wall{background:rgba(0,0,0,.35);border:1px solid rgba(245,166,35,.15);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.cw-label{font-family:'Archivo',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-br);margin-bottom:3px}
+.cw-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-left:2px solid rgba(224,82,82,.45);border-radius:9px;padding:10px 13px 11px 14px;transition:.18s}
+.cw-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+.cw-item .cw-company{font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aa7b8}
+.cw-item .cw-quote{font-size:12.5px;color:#a4b3b0;line-height:1.4}
+.cw-item .cw-tag{flex:none;white-space:nowrap;font-family:'Archivo',sans-serif;font-weight:700;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#e05252;background:rgba(224,82,82,.12);border:1px solid rgba(224,82,82,.2);border-radius:5px;padding:2px 7px}
 
 /* why grid */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -226,16 +227,18 @@ section{padding:84px 0}
 .why-card .wc-icon{width:46px;height:46px;border-radius:13px;background:rgba(245,166,35,.12);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
 .why-card h3{font-size:18px;margin-bottom:8px}
 .why-card p{font-size:13.5px;color:var(--muted);line-height:1.55}
-.why-card .wc-vs{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--faint);line-height:1.5}
-.why-card .wc-vs b{color:#e05252}
+.why-card .wc-vs{margin-top:16px;padding:12px 14px;background:rgba(224,82,82,.06);border:1px solid rgba(224,82,82,.18);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5}
+.why-card .wc-vs b{display:block;font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#e05252;margin-bottom:5px}
 
 /* competitor table */
-.comp-table-wrap{overflow-x:auto;margin-top:10px}
-.comp-table{width:100%;border-collapse:collapse}
-.comp-table th{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
-.comp-table td{padding:14px;font-size:13.5px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top}
-.comp-table tr:last-child td{border-bottom:none}
+.comp-table-wrap{margin-top:18px;border:1px solid var(--line2);border-radius:16px;overflow:hidden;overflow-x:auto;background:rgba(0,0,0,.18)}
+.comp-table{width:100%;border-collapse:collapse;min-width:580px}
+.comp-table thead th{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#1b1304;background:var(--gold);padding:15px 16px;text-align:left;border-right:1px solid rgba(0,0,0,.14)}
+.comp-table thead th:last-child{border-right:none;background:#ef7d70;color:#2b0c08}
+.comp-table td{padding:17px 16px;font-size:13.5px;color:var(--muted);border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.comp-table tbody tr:last-child td{border-bottom:none}
 .comp-table td:first-child{font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;color:var(--ink);white-space:nowrap}
+.comp-table td:last-child{background:rgba(224,82,82,.05)}
 .pain{display:inline-block;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.07em;text-transform:uppercase;border-radius:5px;padding:2px 7px;margin:2px 3px 2px 0}
 .pain-red{color:#e05252;background:rgba(224,82,82,.1);border:1px solid rgba(224,82,82,.2)}
 .pain-yellow{color:#d4a017;background:rgba(212,160,23,.1);border:1px solid rgba(212,160,23,.2)}
@@ -248,7 +251,7 @@ section{padding:84px 0}
 .earn-row{display:grid;grid-template-columns:140px 1fr 110px;align-items:center;gap:16px}
 .earn-row .er-label{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
 .earn-row .er-bar-wrap{background:rgba(0,0,0,.3);border-radius:6px;height:14px;overflow:hidden}
-.earn-row .er-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gold),var(--gold-br))}
+.earn-row .er-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gold),var(--gold-br));box-shadow:0 0 14px -3px rgba(245,166,35,.55)}
 .earn-row .er-amt{font-family:'Archivo',sans-serif;font-weight:900;font-size:15px;color:var(--gold-br);text-align:right}
 .earn-note{font-size:11.5px;color:var(--faint);margin-top:18px}
 
@@ -328,6 +331,7 @@ body.show-hiring #hiring-view{display:block}
 body.show-hiring .nav-back{display:flex}
 body.show-hiring .nav-links-wrap{display:none}
 body.show-hiring .nav-cta .btn-red{display:none}
+body.show-hiring .burger{display:none}
 
 /* hiring view top bar override */
 .hiring-view-topbar{background:linear-gradient(90deg,#0d1f0f,#06101c);border-bottom:1px solid rgba(245,166,35,.2);font-size:12.5px;color:#7aab74;text-align:center;padding:7px 16px}
@@ -354,6 +358,23 @@ body.show-hiring .nav-cta .btn-red{display:none}
   .hero,.hiring-hero{padding:60px 0 52px}
   .trust-in{justify-content:flex-start;gap:14px 22px}
   .earn-row{grid-template-columns:90px 1fr 80px}
+}
+/* hiring: two-sided contrast labels */
+.why-card h3 + p{position:relative;padding-top:24px}
+.why-card h3 + p::before{content:"✓ Our policy";position:absolute;top:0;left:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-br)}
+.why-card .wc-vs b::before{content:"✕ "}
+.cw-item:hover{border-left-color:#e05252;background:rgba(255,255,255,.055)}
+
+/* hiring: competitor table readability */
+.comp-table tbody tr{transition:background .15s}
+.comp-table tbody tr:hover{background:rgba(245,166,35,.04)}
+
+/* accessibility: respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .fiber span{animation:none;opacity:0}
+  .pulse-dot{animation:none}
+  .sc-fill{animation:none;width:100%}
 }
 </style>
 </head>
@@ -671,24 +692,20 @@ body.show-hiring .nav-cta .btn-red{display:none}
     <div class="complaint-wall reveal">
       <div class="cw-label">What reps say at other fiber companies</div>
       <div class="cw-item">
-        <div class="cw-company">AT&amp;T</div>
-        <div class="cw-quote">"They change the commission structure after you're hired. What you were told at offer doesn't match what's on your check."</div>
-        <span class="cw-tag">Commission manipulation</span>
+        <div class="cw-head"><span class="cw-company">AT&amp;T</span><span class="cw-tag">Commission manipulation</span></div>
+        <div class="cw-quote">"They change the commission structure after you're hired — what you're told at offer doesn't match your check."</div>
       </div>
       <div class="cw-item">
-        <div class="cw-company">Frontier</div>
-        <div class="cw-quote">"Install and drop teams cancel roughly 40% of sold accounts. Reps lose commission on deals they didn't lose."</div>
-        <span class="cw-tag">Install drop chargebacks</span>
+        <div class="cw-head"><span class="cw-company">Frontier</span><span class="cw-tag">Install drop chargebacks</span></div>
+        <div class="cw-quote">"Install teams cancel about 40% of sold accounts. You lose commission on deals you didn't lose."</div>
       </div>
       <div class="cw-item">
-        <div class="cw-company">Xfinity / Comcast</div>
-        <div class="cw-quote">"Metrics so unrealistic that hitting four out of five targets means nothing — one miss wipes the entire scorecard."</div>
-        <span class="cw-tag">Impossible metrics</span>
+        <div class="cw-head"><span class="cw-company">Xfinity / Comcast</span><span class="cw-tag">Impossible metrics</span></div>
+        <div class="cw-quote">"Targets so unrealistic that hitting four of five means nothing — one miss wipes the scorecard."</div>
       </div>
       <div class="cw-item">
-        <div class="cw-company">Spectrum</div>
-        <div class="cw-quote">"Too much internal politics. Advancement is about relationships, not results."</div>
-        <span class="cw-tag">Politics over performance</span>
+        <div class="cw-head"><span class="cw-company">Spectrum</span><span class="cw-tag">Politics over performance</span></div>
+        <div class="cw-quote">"Advancement is about relationships, not results — too much internal politics."</div>
       </div>
     </div>
   </div>
@@ -699,23 +716,23 @@ body.show-hiring .nav-cta .btn-red{display:none}
   <div class="wrap">
     <div class="sec-head center reveal"><div class="eyebrow gold">Why Complete Home Today</div><h2>The six things other companies get wrong</h2><p>Every policy below is a direct response to a documented industry failure.</p></div>
     <div class="why-grid">
-      <div class="why-card reveal"><div class="wc-icon">📋</div><h3>Commission you can count on</h3><p>Your rate card is in your IC agreement. It doesn't change mid-quarter. What you're told at signing is what you're paid.</p><div class="wc-vs"><b>Industry pattern:</b> Rate cards revised after hire — often without notice — to shift more risk onto reps.</div></div>
-      <div class="why-card reveal"><div class="wc-icon">🚪</div><h3>You control your schedule</h3><p>As a 1099 independent contractor, you set your own hours and territory approach. No mandatory stand-ups, no mandatory routes.</p><div class="wc-vs"><b>Industry pattern:</b> W-2 reps micromanaged on daily knock counts regardless of results.</div></div>
-      <div class="why-card reveal"><div class="wc-icon">💰</div><h3>No artificial earnings ceiling</h3><p>Stack Frontier Fiber and ADT on the same install and earn on both. More products, more opportunity per door — no cap.</p><div class="wc-vs"><b>Industry pattern:</b> Single-product reps limited by what the company sells, not what the customer needs.</div></div>
-      <div class="why-card reveal"><div class="wc-icon">📄</div><h3>Everything in writing</h3><p>Your IC agreement covers commission structure, territory, chargeback rules, and payment timelines. Verbal promises don't exist here — the document does.</p><div class="wc-vs"><b>Industry pattern:</b> Verbal commitments to reps that don't survive the first billing cycle.</div></div>
-      <div class="why-card reveal"><div class="wc-icon">🎯</div><h3>Real products that close doors</h3><p>2 months free internet, $400 Samsung Best Buy credit, FOX One — these are today's actual offers. Strong promos mean more yeses per door.</p><div class="wc-vs"><b>Industry pattern:</b> Reps sent out with expired offers or products customers don't recognize.</div></div>
-      <div class="why-card reveal"><div class="wc-icon">📈</div><h3>Training that builds earners</h3><p>D2DU 2.0 methodology — Sam Taggart's proven 5-step pitch, Feel/Felt/Found objection handling, and the Pullback Close. You're not thrown at a door unarmed.</p><div class="wc-vs"><b>Industry pattern:</b> "Figure it out as you go" onboarding with no pitch framework and no coaching on the way up.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">📋</div><h3>Commission you can count on</h3><p>Your rate card is in your IC agreement. It doesn't change mid-quarter. What you're told at signing is what you're paid.</p><div class="wc-vs"><b>Industry pattern</b> Rate cards revised after hire — often without notice — to shift more risk onto reps.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">🚪</div><h3>You control your schedule</h3><p>As a 1099 independent contractor, you set your own hours and territory approach. No mandatory stand-ups, no mandatory routes.</p><div class="wc-vs"><b>Industry pattern</b> W-2 reps micromanaged on daily knock counts regardless of results.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">💰</div><h3>No artificial earnings ceiling</h3><p>Stack Frontier Fiber and ADT on the same install and earn on both. More products, more opportunity per door — no cap.</p><div class="wc-vs"><b>Industry pattern</b> Single-product reps limited by what the company sells, not what the customer needs.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">📄</div><h3>Everything in writing</h3><p>Your IC agreement covers commission structure, territory, chargeback rules, and payment timelines. Verbal promises don't exist here — the document does.</p><div class="wc-vs"><b>Industry pattern</b> Verbal commitments to reps that don't survive the first billing cycle.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">🎯</div><h3>Real products that close doors</h3><p>2 months free internet, $400 Samsung Best Buy credit, FOX One — these are today's actual offers. Strong promos mean more yeses per door.</p><div class="wc-vs"><b>Industry pattern</b> Reps sent out with expired offers or products customers don't recognize.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">📈</div><h3>Training that builds earners</h3><p>D2DU 2.0 methodology — Sam Taggart's proven 5-step pitch, Feel/Felt/Found objection handling, and the Pullback Close. You're not thrown at a door unarmed.</p><div class="wc-vs"><b>Industry pattern</b> "Figure it out as you go" onboarding with no pitch framework and no coaching on the way up.</div></div>
     </div>
   </div>
 </section>
 
 <!-- COMPETITOR TABLE + EARNINGS -->
-<section style="padding:84px 0;background:#081120;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section style="padding:84px 0;background:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal"><div class="eyebrow gold">Industry Employment Complaints</div><h2>What fiber company employees actually report</h2><p>Sourced from Glassdoor, Indeed, and BBB reviews. These are industry-wide patterns — not outliers.</p></div>
     <div class="comp-table-wrap reveal">
       <table class="comp-table">
-        <thead><tr><th>Company</th><th>Top Employee Complaint</th><th>Tags</th></tr></thead>
+        <thead><tr><th>Company</th><th>Top Employee Complaint</th><th>Red flags</th></tr></thead>
         <tbody>
           <tr><td>AT&amp;T</td><td>Managers pick favorites and pay new hires more than tenured employees. Base pay unworkable for anyone with a family. Company ignores reps who aren't top producers.</td><td><span class="pain pain-red">Pay inequity</span><span class="pain pain-yellow">Favoritism</span></td></tr>
           <tr><td>Frontier</td><td>Commission structures changed shortly after hire. Upper management rated as poor with no training for managers. Install teams cancel sold accounts, costing reps earned commission.</td><td><span class="pain pain-red">Commission clawback</span><span class="pain pain-yellow">Micromanagement</span></td></tr>
@@ -744,7 +761,7 @@ body.show-hiring .nav-cta .btn-red{display:none}
 </section>
 
 <!-- HOW TO APPLY -->
-<section id="hire-how" style="border-top:1px solid var(--line)">
+<section id="hire-how" style="background:#081120;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head center reveal"><div class="eyebrow gold">How to Join</div><h2>Four steps from application to first door</h2></div>
     <div class="apply-steps">
@@ -757,7 +774,7 @@ body.show-hiring .nav-cta .btn-red{display:none}
 </section>
 
 <!-- HIRING FORM -->
-<section id="hire-apply" style="background:#081120;border-top:1px solid rgba(245,166,35,.15);border-bottom:1px solid var(--line);padding:84px 0">
+<section id="hire-apply" style="background:var(--navy);border-top:1px solid rgba(245,166,35,.15);border-bottom:1px solid var(--line);padding:84px 0">
   <div class="wrap hire-avail-in">
     <div class="hire-copy reveal">
       <div class="eyebrow gold">Apply Now</div>
@@ -799,7 +816,7 @@ body.show-hiring .nav-cta .btn-red{display:none}
 </section>
 
 <!-- HIRING FAQ -->
-<section style="border-top:1px solid var(--line);padding:84px 0">
+<section style="background:#081120;border-top:1px solid var(--line);padding:84px 0">
   <div class="wrap">
     <div class="sec-head center reveal"><div class="eyebrow gold">Rep FAQ</div><h2>Questions about joining</h2></div>
     <div class="faq-list">
