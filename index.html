@@ -316,6 +316,23 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
+/* ---- view switching ---- */
+#main-view{display:block}
+#hiring-view{display:none}
+body.show-hiring #main-view{display:none}
+body.show-hiring #hiring-view{display:block}
+
+/* hiring nav back button */
+.nav-back{display:none;align-items:center;gap:8px;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;color:var(--gold-br);cursor:pointer;background:none;border:none;padding:0}
+.nav-back:hover{color:#fff}
+body.show-hiring .nav-back{display:flex}
+body.show-hiring .nav-links-wrap{display:none}
+body.show-hiring .nav-cta .btn-red{display:none}
+
+/* hiring view top bar override */
+.hiring-view-topbar{background:linear-gradient(90deg,#0d1f0f,#06101c);border-bottom:1px solid rgba(245,166,35,.2);font-size:12.5px;color:#7aab74;text-align:center;padding:7px 16px}
+.hiring-view-topbar b{color:var(--gold-br);font-weight:700}
+
 @media(max-width:900px){
   .hero-in,.hiring-hero-in{grid-template-columns:1fr;gap:40px}
   .hero-vis{order:-1}
@@ -342,25 +359,24 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
 </head>
 <body>
 
-<div class="topbar">
-  <b>Complete Home Today</b> is an independent Authorized Sales Agent for Frontier® &amp; EarthLink® internet — not Frontier or EarthLink. &nbsp;|&nbsp; <a href="#hiring" style="color:var(--gold-br);font-weight:700">Now Hiring Sales Reps →</a>
-</div>
-
 <nav class="nav">
   <div class="wrap nav-in">
-    <a href="#top" class="logo" aria-label="Complete Home Today home">
+    <a href="#top" class="logo" id="logoLink" aria-label="Complete Home Today home">
       <span class="logo-mark">COMPLETE<span class="dot">·</span>HOME</span>
       <span class="logo-tag">Authorized<br>Internet Agent</span>
     </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#plans">Plans</a>
-      <a href="#offers">Offers</a>
-      <a href="#addons">Add-Ons</a>
-      <a href="#tv">TV</a>
-      <a href="#security">Security</a>
-      <a href="#hiring" class="hiring-link">Now Hiring</a>
-      <a href="#faq">FAQ</a>
+    <div class="nav-links-wrap" id="navLinksWrap">
+      <div class="nav-links" id="navLinks">
+        <a href="#plans">Plans</a>
+        <a href="#offers">Offers</a>
+        <a href="#addons">Add-Ons</a>
+        <a href="#tv">TV</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="hiring-link" id="navHiringBtn">Now Hiring</a>
+      </div>
     </div>
+    <button class="nav-back" id="navBackBtn">← Back to Main Site</button>
     <div class="nav-cta">
       <a href="#availability" class="btn btn-red">Check Availability</a>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -368,6 +384,12 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
   </div>
 </nav>
 <span id="top"></span>
+
+<!-- MAIN SITE VIEW -->
+<div id="main-view">
+<div class="topbar">
+  <b>Complete Home Today</b> is an independent Authorized Sales Agent for Frontier® &amp; EarthLink® internet — not Frontier or EarthLink. &nbsp;|&nbsp; <a href="#" id="topbarHiringBtn" style="color:var(--gold-br);font-weight:700">Now Hiring Sales Reps →</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -535,7 +557,104 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
   </div>
 </section>
 
-<!-- ====================== NOW HIRING ====================== -->
+<!-- AVAILABILITY FORM -->
+<section class="avail" id="availability">
+  <div class="wrap avail-in">
+    <div class="avail-copy reveal">
+      <div class="eyebrow">Check Availability</div>
+      <h2>See what's available at your address</h2>
+      <p>Fiber availability varies street by street, and not every provider reaches every home. Share your details and a local Authorized Sales Agent will confirm your options and current offers.</p>
+      <div class="ac-row"><span class="tick">✓</span> No obligation — it's just a quick check</div>
+      <div class="ac-row"><span class="tick">✓</span> Real pricing and offers for your address</div>
+      <div class="ac-row"><span class="tick">✓</span> Help comparing Frontier and EarthLink</div>
+      <div class="ac-row" style="margin-top:22px;font-size:13px;color:var(--faint)">Prefer to talk now? Call <a href="tel:+14089094484" style="color:var(--ink);font-weight:600">(408) 909-4484</a> or email <a href="mailto:Completehometodayllc@gmail.com" style="color:var(--ink);font-weight:600">Completehometodayllc@gmail.com</a>.</div>
+    </div>
+    <div class="form-card reveal">
+      <form id="leadForm" novalidate>
+        <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="form-grid">
+          <div class="field full"><label for="f-name">Full name *</label><input id="f-name" name="name" type="text" placeholder="Jordan Rivera" required></div>
+          <div class="field full"><label for="f-address">Service address *</label><input id="f-address" name="address" type="text" placeholder="123 Main St, City, CA" required></div>
+          <div class="field"><label for="f-zip">ZIP code *</label><input id="f-zip" name="zip" type="text" inputmode="numeric" placeholder="92562" required></div>
+          <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="phone" type="tel" placeholder="(000) 000-0000" required></div>
+          <div class="field full"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" placeholder="you@email.com" required></div>
+          <div class="field"><label for="f-prov">Provider interest</label><select id="f-prov" name="provider"><option value="">No preference</option><option>Frontier Fiber</option><option>EarthLink</option><option>Whatever's fastest</option></select></div>
+          <div class="field"><label for="f-plan">Speed of interest</label><select id="f-plan" name="plan"><option value="">Not sure yet</option><option>Up to 500 Mbps</option><option>1 Gig</option><option>2 Gig or higher</option><option>5G Home Internet (wireless)</option><option>TV / Streaming bundle</option></select></div>
+          <div class="field"><label for="f-vz">Verizon mobile customer?</label><select id="f-vz" name="has_verizon"><option value="">Select</option><option>Yes — postpaid</option><option>Yes — prepaid</option><option>No</option></select></div>
+          <div class="field"><label for="f-time">Best time to reach you</label><select id="f-time" name="best_time"><option value="">Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          <div class="field full"><label for="f-adt">Add a home security package?</label><select id="f-adt" name="adt_package"><option value="">No — internet only</option><option>ADT Bronze</option><option>ADT Silver</option><option>ADT Gold</option><option>Not sure — tell me about security</option></select></div>
+          <div class="field full"><label for="f-found">How did you find us?</label><select id="f-found" name="how_found"><option value="">Select one</option><option>A rep came to my door</option><option>Referred by a friend or family</option><option>Flyer or mailer</option><option>Online search</option><option>Social media</option><option>Other</option></select></div>
+          <div class="field full"><label for="f-refname">Rep or referral name</label><input id="f-refname" name="referral_name" type="text" placeholder="Their name"><span class="field-note">If a rep visited you or someone referred you, please type their name so we can credit them.</span></div>
+        </div>
+        <button type="submit" class="btn btn-red" id="submitBtn" style="width:100%;justify-content:center;margin-top:18px;font-size:15.5px;padding:15px">Check My Availability</button>
+        <p class="form-err" id="formErr"></p>
+        <p class="form-fine">By submitting, you agree to be contacted by an Authorized Sales Agent about Frontier, EarthLink, and ADT-monitored security services by phone, text, or email. Consent is not a condition of purchase. Submitting this form is a request to check availability — it does not place an order or guarantee service or pricing.</p>
+      </form>
+      <div class="form-done" id="formDone">
+        <div class="ck">✓</div>
+        <h3>Thanks — we've got your request</h3>
+        <p>A local Authorized Sales Agent will reach out shortly to confirm availability and current offers for your address.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal"><div class="eyebrow">Questions</div><h2>Good to know</h2></div>
+    <div class="faq-list">
+      <details class="reveal"><summary>Are you Frontier or EarthLink? <span class="pm">+</span></summary><div class="ans">Neither. Complete Home Today is an independent, authorized sales agent for both Frontier and EarthLink. We help you compare and sign up for service, while the provider you choose handles the network, billing, installation, and support.</div></details>
+      <details class="reveal"><summary>Which providers and speeds can I get? <span class="pm">+</span></summary><div class="ans">We offer Frontier Fiber (200 Mbps up to 7 Gig) and EarthLink (100 Mbps up to 5 Gig fiber, plus a wireless 5G Home Internet option up to 300 Mbps). The exact providers and speeds available depend on your address — that's what the availability check confirms.</div></details>
+      <details class="reveal"><summary>What are the current offers? <span class="pm">+</span></summary><div class="ans">Frontier is running 2 Months "On Us" (1 Gig or 500M, through June 30, 2026), a $400 Samsung credit on 1 Gig+, 3 months of FOX One for eligible Verizon mobile customers, and a $15/mo Mobile + Home discount. EarthLink offers introductory pricing on its 1 Gig and 500M fiber plans and a $59.95/mo 5G Home Internet plan. Offers change often — your agent confirms current details.</div></details>
+      <details class="reveal"><summary>What fees should I expect? <span class="pm">+</span></summary><div class="ans">Frontier prices shown reflect a $10 AutoPay discount and don't include taxes and surcharges. EarthLink plans include a $14.95/mo router rental, a one-time $24.95 install fee, and a $79.95 processing and handling fee due at signup. Your agent reviews every fee before you commit.</div></details>
+      <details class="reveal"><summary>Is there a contract? <span class="pm">+</span></summary><div class="ans">It depends on the plan. Some Frontier promotions include a 12-month term, and an early termination fee may apply if service is cancelled within that period. EarthLink's 5G Home Internet requires no contract. Your agent will explain the terms for whichever plan you choose.</div></details>
+      <details class="reveal"><summary>Do I need Verizon mobile service? <span class="pm">+</span></summary><div class="ans">No. Frontier and EarthLink internet work fully on their own. If you do have an eligible Verizon postpaid mobile plan, you may unlock extra Frontier savings — the $15/mo Mobile + Home discount, Verizon Perks, and the FOX One offer. It's a bonus, not a requirement.</div></details>
+      <details class="reveal"><summary>Do you offer home security? <span class="pm">+</span></summary><div class="ans">Yes. We offer ADT-monitored home security through Direct Protection Security, an ADT Authorized Dealer, with three packages — Bronze, Silver, and Gold. Equipment and 24/7 monitoring are quoted for your home; just pick a package on the availability form and your agent handles the rest.</div></details>
+      <details class="reveal"><summary>Is the pricing on this site final? <span class="pm">+</span></summary><div class="ans">Offers and pricing change periodically and vary by address. Your authorized agent confirms exact, current pricing and terms for your home at the point of sale.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="logo"><span class="logo-mark">COMPLETE<span class="dot">·</span>HOME</span><span class="logo-tag">Authorized<br>Internet Agent</span></div>
+        <p>An independent Authorized Sales Agent helping households compare and switch to high-speed internet from Frontier and EarthLink — and helping self-motivated sales professionals build their own income.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#plans">Plans</a><a href="#offers">Current Offers</a><a href="#addons">Add-Ons</a><a href="#tv">TV &amp; Streaming</a><a href="#security">Home Security</a><a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Work With Us</h4>
+        <a href="#" id="footerHiringBtn" style="color:var(--gold-br);font-weight:700">Now Hiring — Sales Reps →</a>
+        <h4 style="margin-top:18px">Get in touch</h4>
+        <a href="#availability">Check Availability</a><a href="tel:+14089094484">(408) 909-4484</a><a href="mailto:Completehometodayllc@gmail.com">Completehometodayllc@gmail.com</a><span>Serving California</span>
+      </div>
+    </div>
+    <div class="disclosure">
+      <b>Authorized Sales Agent Disclosure.</b> Complete Home Today LLC is an independent Authorized Sales Agent for Frontier Communications and EarthLink, and offers ADT-monitored home security through Direct Protection Security, an ADT Authorized Dealer. It is not Frontier, EarthLink, or ADT. Frontier® (a Verizon company), EarthLink®, ADT®, and related logos and marks are trademarks of their respective owners. &nbsp;
+      <b>Pricing &amp; offers.</b> Advertised Frontier monthly prices reflect enrollment in AutoPay (a $10 discount) and exclude taxes, surcharges, and fees. EarthLink plans require a separate monthly router/modem rental ($14.95/mo), a one-time installation fee ($24.95), and a processing &amp; handling fee ($79.95) due at the point of sale. Home security packages are professionally monitored by ADT; equipment, installation, monitoring rates, and any monitoring agreement or term length are quoted per home. Service, speeds, equipment, and promotional offers vary by address and are subject to change without notice; final pricing and offers are confirmed at the point of sale. Internet speeds are not guaranteed and may vary. Some promotions require a 12-month term and may carry an early termination fee. &nbsp;
+      <b>Contractor Disclosure.</b> Sales representatives engaged by Complete Home Today LLC operate as independent contractors under 1099 agreements structured in compliance with California Labor Code §2775 et seq. (AB5) and the Borello multi-factor test. Independent contractor status does not guarantee any minimum earnings. Commission is earned per confirmed installation and is subject to chargeback as defined in the applicable IC agreement. &nbsp;
+      <b>Licensing.</b> Home security in California is sold and installed under Alarm Company Operator (ACO) License No. 6446, Direct Protection Security, and Alarm Company Employee (ACE) License No. 552544, issued by the California Bureau of Security &amp; Investigative Services (BSIS).
+      <div class="copyr">© <span id="yr"></span> Complete Home Today. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#main-view -->
+
+<!-- HIRING VIEW — hidden until "Now Hiring" clicked -->
+<div id="hiring-view">
+
+<div class="hiring-view-topbar">
+  <b>Complete Home Today — Careers</b> &nbsp;|&nbsp; 1099 Independent Contractor · California Territories &nbsp;|&nbsp; <a href="#" id="hiringTopbarBack" style="color:var(--gold-br);font-weight:700">← Back to Main Site</a>
+</div>
+
+<!-- ====================== NOW HIRING HERO ====================== -->
 <section class="hiring-hero" id="hiring">
   <div class="hiring-pulse"><span class="pulse-dot"></span>Now Hiring</div>
   <div class="wrap hiring-hero-in">
@@ -590,7 +709,7 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
   </div>
 </section>
 
-<!-- COMPETITOR TABLE -->
+<!-- COMPETITOR TABLE + EARNINGS -->
 <section style="padding:84px 0;background:#081120;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal"><div class="eyebrow gold">Industry Employment Complaints</div><h2>What fiber company employees actually report</h2><p>Sourced from Glassdoor, Indeed, and BBB reviews. These are industry-wide patterns — not outliers.</p></div>
@@ -652,12 +771,7 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
       <div style="margin-top:22px;font-size:13px;color:var(--faint)">Prefer to call? Reach us at <a href="tel:+14089094484" style="color:var(--ink);font-weight:600">(408) 909-4484</a> or <a href="mailto:Completehometodayllc@gmail.com" style="color:var(--ink);font-weight:600">Completehometodayllc@gmail.com</a></div>
     </div>
     <div class="hire-form-card reveal">
-      <form id="hireForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <input type="hidden" name="access_key" value="94f15b07-ca25-44d8-8413-6933fc25533a">
-        <input type="hidden" name="from_name" value="Complete Home Today — Job Applicant">
-        <input type="hidden" name="subject" id="hSubject" value="New Job Application — Complete Home Today">
-        <input type="hidden" name="replyto" id="hReplyto" value="">
-        <input type="hidden" name="redirect" id="hRedirect" value="">
+      <form id="hireForm" novalidate>
         <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <div class="form-grid">
           <div class="field"><label for="h-name">Full name *</label><input id="h-name" name="name" type="text" placeholder="Jordan Rivera" required></div>
@@ -700,107 +814,89 @@ footer{background:#06101c;border-top:1px solid var(--line);padding:56px 0 30px}
   </div>
 </section>
 
-<!-- AVAILABILITY FORM -->
-<section class="avail" id="availability">
-  <div class="wrap avail-in">
-    <div class="avail-copy reveal">
-      <div class="eyebrow">Check Availability</div>
-      <h2>See what's available at your address</h2>
-      <p>Fiber availability varies street by street, and not every provider reaches every home. Share your details and a local Authorized Sales Agent will confirm your options and current offers.</p>
-      <div class="ac-row"><span class="tick">✓</span> No obligation — it's just a quick check</div>
-      <div class="ac-row"><span class="tick">✓</span> Real pricing and offers for your address</div>
-      <div class="ac-row"><span class="tick">✓</span> Help comparing Frontier and EarthLink</div>
-      <div class="ac-row" style="margin-top:22px;font-size:13px;color:var(--faint)">Prefer to talk now? Call <a href="tel:+14089094484" style="color:var(--ink);font-weight:600">(408) 909-4484</a> or email <a href="mailto:Completehometodayllc@gmail.com" style="color:var(--ink);font-weight:600">Completehometodayllc@gmail.com</a>.</div>
-    </div>
-    <div class="form-card reveal">
-      <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <input type="hidden" name="access_key" value="94f15b07-ca25-44d8-8413-6933fc25533a">
-        <input type="hidden" name="from_name" value="Complete Home Today Website">
-        <input type="hidden" name="subject" id="w3fSubject" value="New Website Lead — Complete Home Today">
-        <input type="hidden" name="replyto" id="w3fReplyto" value="">
-        <input type="hidden" name="redirect" id="w3fRedirect" value="">
-        <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-        <div class="form-grid">
-          <div class="field full"><label for="f-name">Full name *</label><input id="f-name" name="name" type="text" placeholder="Jordan Rivera" required></div>
-          <div class="field full"><label for="f-address">Service address *</label><input id="f-address" name="address" type="text" placeholder="123 Main St, City, CA" required></div>
-          <div class="field"><label for="f-zip">ZIP code *</label><input id="f-zip" name="zip" type="text" inputmode="numeric" placeholder="92562" required></div>
-          <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="phone" type="tel" placeholder="(000) 000-0000" required></div>
-          <div class="field full"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" placeholder="you@email.com" required></div>
-          <div class="field"><label for="f-prov">Provider interest</label><select id="f-prov" name="provider"><option value="">No preference</option><option>Frontier Fiber</option><option>EarthLink</option><option>Whatever's fastest</option></select></div>
-          <div class="field"><label for="f-plan">Speed of interest</label><select id="f-plan" name="plan"><option value="">Not sure yet</option><option>Up to 500 Mbps</option><option>1 Gig</option><option>2 Gig or higher</option><option>5G Home Internet (wireless)</option><option>TV / Streaming bundle</option></select></div>
-          <div class="field"><label for="f-vz">Verizon mobile customer?</label><select id="f-vz" name="has_verizon"><option value="">Select</option><option>Yes — postpaid</option><option>Yes — prepaid</option><option>No</option></select></div>
-          <div class="field"><label for="f-time">Best time to reach you</label><select id="f-time" name="best_time"><option value="">Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
-          <div class="field full"><label for="f-adt">Add a home security package?</label><select id="f-adt" name="adt_package"><option value="">No — internet only</option><option>ADT Bronze</option><option>ADT Silver</option><option>ADT Gold</option><option>Not sure — tell me about security</option></select></div>
-          <div class="field full"><label for="f-found">How did you find us?</label><select id="f-found" name="how_found"><option value="">Select one</option><option>A rep came to my door</option><option>Referred by a friend or family</option><option>Flyer or mailer</option><option>Online search</option><option>Social media</option><option>Other</option></select></div>
-          <div class="field full"><label for="f-refname">Rep or referral name</label><input id="f-refname" name="referral_name" type="text" placeholder="Their name"><span class="field-note">If a rep visited you or someone referred you, please type their name so we can credit them.</span></div>
-        </div>
-        <button type="submit" class="btn btn-red" id="submitBtn" style="width:100%;justify-content:center;margin-top:18px;font-size:15.5px;padding:15px">Check My Availability</button>
-        <p class="form-err" id="formErr"></p>
-        <p class="form-fine">By submitting, you agree to be contacted by an Authorized Sales Agent about Frontier, EarthLink, and ADT-monitored security services by phone, text, or email. Consent is not a condition of purchase. Submitting this form is a request to check availability — it does not place an order or guarantee service or pricing.</p>
-      </form>
-      <div class="form-done" id="formDone">
-        <div class="ck">✓</div>
-        <h3>Thanks — we've got your request</h3>
-        <p>A local Authorized Sales Agent will reach out shortly to confirm availability and current offers for your address.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CUSTOMER FAQ -->
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head center reveal"><div class="eyebrow">Questions</div><h2>Good to know</h2></div>
-    <div class="faq-list">
-      <details class="reveal"><summary>Are you Frontier or EarthLink? <span class="pm">+</span></summary><div class="ans">Neither. Complete Home Today is an independent, authorized sales agent for both Frontier and EarthLink. We help you compare and sign up for service, while the provider you choose handles the network, billing, installation, and support.</div></details>
-      <details class="reveal"><summary>Which providers and speeds can I get? <span class="pm">+</span></summary><div class="ans">We offer Frontier Fiber (200 Mbps up to 7 Gig) and EarthLink (100 Mbps up to 5 Gig fiber, plus a wireless 5G Home Internet option up to 300 Mbps). The exact providers and speeds available depend on your address — that's what the availability check confirms.</div></details>
-      <details class="reveal"><summary>What are the current offers? <span class="pm">+</span></summary><div class="ans">Frontier is running 2 Months "On Us" (1 Gig or 500M, through June 30, 2026), a $400 Samsung credit on 1 Gig+, 3 months of FOX One for eligible Verizon mobile customers, and a $15/mo Mobile + Home discount. EarthLink offers introductory pricing on its 1 Gig and 500M fiber plans and a $59.95/mo 5G Home Internet plan. Offers change often — your agent confirms current details.</div></details>
-      <details class="reveal"><summary>What fees should I expect? <span class="pm">+</span></summary><div class="ans">Frontier prices shown reflect a $10 AutoPay discount and don't include taxes and surcharges. EarthLink plans include a $14.95/mo router rental, a one-time $24.95 install fee, and a $79.95 processing and handling fee due at signup. Your agent reviews every fee before you commit.</div></details>
-      <details class="reveal"><summary>Is there a contract? <span class="pm">+</span></summary><div class="ans">It depends on the plan. Some Frontier promotions include a 12-month term, and an early termination fee may apply if service is cancelled within that period. EarthLink's 5G Home Internet requires no contract. Your agent will explain the terms for whichever plan you choose.</div></details>
-      <details class="reveal"><summary>Do I need Verizon mobile service? <span class="pm">+</span></summary><div class="ans">No. Frontier and EarthLink internet work fully on their own. If you do have an eligible Verizon postpaid mobile plan, you may unlock extra Frontier savings — the $15/mo Mobile + Home discount, Verizon Perks, and the FOX One offer. It's a bonus, not a requirement.</div></details>
-      <details class="reveal"><summary>Do you offer home security? <span class="pm">+</span></summary><div class="ans">Yes. We offer ADT-monitored home security through Direct Protection Security, an ADT Authorized Dealer, with three packages — Bronze, Silver, and Gold. Equipment and 24/7 monitoring are quoted for your home; just pick a package on the availability form and your agent handles the rest.</div></details>
-      <details class="reveal"><summary>Is the pricing on this site final? <span class="pm">+</span></summary><div class="ans">Offers and pricing change periodically and vary by address. Your authorized agent confirms exact, current pricing and terms for your home at the point of sale.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- HIRING FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-col">
         <div class="logo"><span class="logo-mark">COMPLETE<span class="dot">·</span>HOME</span><span class="logo-tag">Authorized<br>Internet Agent</span></div>
-        <p>An independent Authorized Sales Agent helping households compare and switch to high-speed internet from Frontier and EarthLink — and helping self-motivated sales professionals build their own income.</p>
+        <p>Helping self-motivated sales professionals build their own income as 1099 independent contractors selling Frontier Fiber and ADT Home Security.</p>
       </div>
       <div class="foot-col">
-        <h4>Explore</h4>
-        <a href="#plans">Plans</a><a href="#offers">Current Offers</a><a href="#addons">Add-Ons</a><a href="#tv">TV &amp; Streaming</a><a href="#security">Home Security</a><a href="#faq">FAQ</a>
+        <h4>Careers</h4>
+        <a href="#hiring">About the Role</a>
+        <a href="#why-us">Why Complete Home Today</a>
+        <a href="#hire-apply">Apply Now</a>
       </div>
       <div class="foot-col">
-        <h4>Work With Us</h4>
-        <a href="#hiring">Now Hiring</a><a href="#hire-apply">Apply Online</a>
-        <h4 style="margin-top:18px">Get in touch</h4>
-        <a href="#availability">Check Availability</a><a href="tel:+14089094484">(408) 909-4484</a><a href="mailto:Completehometodayllc@gmail.com">Completehometodayllc@gmail.com</a><span>Serving California</span>
+        <h4>Get in touch</h4>
+        <a href="tel:+14089094484">(408) 909-4484</a>
+        <a href="mailto:Completehometodayllc@gmail.com">Completehometodayllc@gmail.com</a>
+        <span>Serving California</span>
+        <a href="#" id="footerBackBtn" style="margin-top:14px;color:var(--gold-br);font-weight:700">← Back to Main Site</a>
       </div>
     </div>
     <div class="disclosure">
-      <b>Authorized Sales Agent Disclosure.</b> Complete Home Today LLC is an independent Authorized Sales Agent for Frontier Communications and EarthLink, and offers ADT-monitored home security through Direct Protection Security, an ADT Authorized Dealer. It is not Frontier, EarthLink, or ADT. Frontier® (a Verizon company), EarthLink®, ADT®, and related logos and marks are trademarks of their respective owners. &nbsp;
-      <b>Pricing &amp; offers.</b> Advertised Frontier monthly prices reflect enrollment in AutoPay (a $10 discount) and exclude taxes, surcharges, and fees. EarthLink plans require a separate monthly router/modem rental ($14.95/mo), a one-time installation fee ($24.95), and a processing &amp; handling fee ($79.95) due at the point of sale. Home security packages are professionally monitored by ADT; equipment, installation, monitoring rates, and any monitoring agreement or term length are quoted per home. Service, speeds, equipment, and promotional offers vary by address and are subject to change without notice; final pricing and offers are confirmed at the point of sale. Internet speeds are not guaranteed and may vary. Some promotions require a 12-month term and may carry an early termination fee. &nbsp;
       <b>Contractor Disclosure.</b> Sales representatives engaged by Complete Home Today LLC operate as independent contractors under 1099 agreements structured in compliance with California Labor Code §2775 et seq. (AB5) and the Borello multi-factor test. Independent contractor status does not guarantee any minimum earnings. Commission is earned per confirmed installation and is subject to chargeback as defined in the applicable IC agreement. &nbsp;
       <b>Licensing.</b> Home security in California is sold and installed under Alarm Company Operator (ACO) License No. 6446, Direct Protection Security, and Alarm Company Employee (ACE) License No. 552544, issued by the California Bureau of Security &amp; Investigative Services (BSIS).
-      <div class="copyr">© <span id="yr"></span> Complete Home Today. All rights reserved.</div>
+      <div class="copyr">© <span id="yr2"></span> Complete Home Today. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
+</div><!-- /#hiring-view -->
+
 <script>
 document.getElementById("yr").textContent = new Date().getFullYear();
+document.getElementById("yr2").textContent = new Date().getFullYear();
 
 // mobile nav
 var burger = document.getElementById("burger");
 var navLinks = document.getElementById("navLinks");
 burger.addEventListener("click", function(){ navLinks.classList.toggle("open"); });
 navLinks.addEventListener("click", function(e){ if(e.target.tagName==="A") navLinks.classList.remove("open"); });
+
+// ---- VIEW SWITCHING ----
+function showHiring(e) {
+  if(e) e.preventDefault();
+  document.body.classList.add("show-hiring");
+  window.scrollTo(0,0);
+  // re-trigger reveals in hiring view
+  document.querySelectorAll("#hiring-view .reveal:not(.in)").forEach(function(el,i){
+    el.style.transitionDelay = (Math.min(i%5,4)*0.07)+"s";
+    hiringIO.observe(el);
+  });
+}
+function showMain(e) {
+  if(e) e.preventDefault();
+  document.body.classList.remove("show-hiring");
+  window.scrollTo(0,0);
+}
+
+// hiring triggers
+var navHiringBtn = document.getElementById("navHiringBtn");
+var topbarHiringBtn = document.getElementById("topbarHiringBtn");
+var footerHiringBtn = document.getElementById("footerHiringBtn");
+if(navHiringBtn) navHiringBtn.addEventListener("click", showHiring);
+if(topbarHiringBtn) topbarHiringBtn.addEventListener("click", showHiring);
+if(footerHiringBtn) footerHiringBtn.addEventListener("click", showHiring);
+
+// back triggers
+var navBackBtn = document.getElementById("navBackBtn");
+var hiringTopbarBack = document.getElementById("hiringTopbarBack");
+var footerBackBtn = document.getElementById("footerBackBtn");
+var logoLink = document.getElementById("logoLink");
+if(navBackBtn) navBackBtn.addEventListener("click", showMain);
+if(hiringTopbarBack) hiringTopbarBack.addEventListener("click", showMain);
+if(footerBackBtn) footerBackBtn.addEventListener("click", showMain);
+if(logoLink) logoLink.addEventListener("click", function(e){
+  if(document.body.classList.contains("show-hiring")){ showMain(e); }
+});
+
+// check URL param on load
+if(location.search.indexOf("careers=1")!==-1 || location.hash==="#hiring"){
+  document.body.classList.add("show-hiring");
+}
 
 // provider toggle
 var toggle = document.getElementById("provToggle");
@@ -811,62 +907,135 @@ toggle.addEventListener("click", function(e){
   document.querySelectorAll("[data-grid]").forEach(function(g){ g.classList.toggle("hidden", g.getAttribute("data-grid")!==prov); });
 });
 
-// scroll reveal
+// scroll reveal — main site
 var io = new IntersectionObserver(function(entries){
   entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
 },{threshold:.1});
-document.querySelectorAll(".reveal").forEach(function(el,i){
+document.querySelectorAll("#main-view .reveal").forEach(function(el,i){
   el.style.transitionDelay = (Math.min(i%5,4)*0.07)+"s"; io.observe(el);
 });
+
+// scroll reveal — hiring view (lazy, triggered on show)
+var hiringIO = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); hiringIO.unobserve(en.target); } });
+},{threshold:.1});
 
 // ADT pre-select
 document.querySelectorAll("[data-adt]").forEach(function(a){
   a.addEventListener("click", function(){ var s=document.getElementById("f-adt"); if(s) s.value=a.getAttribute("data-adt"); });
 });
 
-// customer lead form
-var form = document.getElementById("leadForm");
-var done = document.getElementById("formDone");
-var submitBtn = document.getElementById("submitBtn");
-var errBox = document.getElementById("formErr");
-var rd = document.getElementById("w3fRedirect");
-if(rd) rd.value = location.origin+location.pathname+"?submitted=1#availability";
-if(location.search.indexOf("submitted=1")!==-1){
-  if(done){ form.style.display="none"; done.style.display="block"; }
-  if(window.history&&history.replaceState) history.replaceState({},"",location.pathname+"#availability");
-}
-form.addEventListener("submit",function(e){
-  var req=["name","address","zip","phone","email"]; var ok=true;
-  req.forEach(function(n){ var el=form.elements[n]; if(!el.value.trim()){ ok=false; el.style.borderColor="var(--red)"; } else{ el.style.borderColor=""; } });
-  if(!ok){ e.preventDefault(); if(errBox){ errBox.textContent="⚠ Please fill in the highlighted fields and try again."; errBox.style.display="block"; } return; }
-  if(form.elements["botcheck"]&&form.elements["botcheck"].checked){ e.preventDefault(); form.style.display="none"; done.style.display="block"; return; }
-  document.getElementById("w3fSubject").value="New Website Lead — "+form.elements["name"].value.trim()+" ("+form.elements["zip"].value.trim()+")";
-  document.getElementById("w3fReplyto").value=form.elements["email"].value.trim();
-  if(errBox) errBox.style.display="none";
-  submitBtn.textContent="Sending…";
-});
+// ---- SHARED AJAX SUBMIT HELPER ----
+function submitToWeb3Forms(formEl, requiredFields, subjectVal, opts) {
+  // opts: { btnEl, errEl, doneEl, accentColor }
+  formEl.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-// hiring form
-var hForm = document.getElementById("hireForm");
-var hDone = document.getElementById("hFormDone");
-var hBtn  = document.getElementById("hSubmitBtn");
-var hErr  = document.getElementById("hFormErr");
-var hrd = document.getElementById("hRedirect");
-if(hrd) hrd.value = location.origin+location.pathname+"?hired=1#hire-apply";
-if(location.search.indexOf("hired=1")!==-1){
-  if(hDone){ hForm.style.display="none"; hDone.style.display="block"; }
-  if(window.history&&history.replaceState) history.replaceState({},"",location.pathname+"#hire-apply");
+    // honeypot check
+    if(formEl.elements["botcheck"] && formEl.elements["botcheck"].checked) {
+      formEl.style.display="none";
+      if(opts.doneEl) opts.doneEl.style.display="block";
+      return;
+    }
+
+    // required field validation
+    var ok = true;
+    requiredFields.forEach(function(n) {
+      var el = formEl.elements[n];
+      if(!el || !el.value.trim()) {
+        ok = false;
+        if(el) el.style.borderColor = opts.accentColor || "var(--red)";
+      } else {
+        if(el) el.style.borderColor = "";
+      }
+    });
+    if(!ok) {
+      if(opts.errEl) {
+        opts.errEl.textContent = "⚠ Please fill in the highlighted fields and try again.";
+        opts.errEl.style.display = "block";
+      }
+      return;
+    }
+
+    if(opts.errEl) opts.errEl.style.display = "none";
+    if(opts.btnEl) { opts.btnEl.textContent = "Sending…"; opts.btnEl.disabled = true; }
+
+    // build JSON payload from all named form fields
+    var data = { access_key: "94f15b07-ca25-44d8-8413-6933fc25533a" };
+    data.subject = subjectVal;
+    data.from_name = opts.fromName || "Complete Home Today Website";
+
+    // pull reply-to from email field
+    var emailEl = formEl.elements["email"];
+    if(emailEl && emailEl.value.trim()) data.replyto = emailEl.value.trim();
+
+    // collect all named inputs/selects/textareas
+    var els = formEl.elements;
+    for(var i=0; i<els.length; i++) {
+      var f = els[i];
+      if(!f.name || f.name==="access_key" || f.name==="botcheck") continue;
+      if(f.tagName==="BUTTON") continue;
+      if(f.value && f.value.trim()) data[f.name] = f.value.trim();
+    }
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(data)
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if(json.success) {
+        formEl.style.display = "none";
+        if(opts.doneEl) opts.doneEl.style.display = "block";
+        if(opts.doneEl) opts.doneEl.scrollIntoView({ behavior:"smooth", block:"center" });
+      } else {
+        if(opts.btnEl) { opts.btnEl.textContent = opts.btnLabel || "Submit"; opts.btnEl.disabled = false; }
+        if(opts.errEl) {
+          opts.errEl.textContent = "⚠ Something went wrong. Please try again or call us directly.";
+          opts.errEl.style.display = "block";
+        }
+      }
+    })
+    .catch(function() {
+      if(opts.btnEl) { opts.btnEl.textContent = opts.btnLabel || "Submit"; opts.btnEl.disabled = false; }
+      if(opts.errEl) {
+        opts.errEl.textContent = "⚠ Network error. Please check your connection and try again.";
+        opts.errEl.style.display = "block";
+      }
+    });
+  });
 }
-hForm.addEventListener("submit",function(e){
-  var req=["name","phone","email","city"]; var ok=true;
-  req.forEach(function(n){ var el=hForm.elements[n]; if(!el||!el.value.trim()){ ok=false; if(el) el.style.borderColor="var(--gold)"; } else{ el.style.borderColor=""; } });
-  if(!ok){ e.preventDefault(); if(hErr){ hErr.textContent="⚠ Please fill in the highlighted fields and try again."; hErr.style.display="block"; } return; }
-  if(hForm.elements["botcheck"]&&hForm.elements["botcheck"].checked){ e.preventDefault(); hForm.style.display="none"; hDone.style.display="block"; return; }
-  document.getElementById("hSubject").value="New Job Application — "+hForm.elements["name"].value.trim()+" ("+(hForm.elements["city"]?hForm.elements["city"].value.trim():"")+")";
-  document.getElementById("hReplyto").value=hForm.elements["email"].value.trim();
-  if(hErr) hErr.style.display="none";
-  hBtn.textContent="Submitting…";
-});
+
+// ---- CUSTOMER LEAD FORM ----
+submitToWeb3Forms(
+  document.getElementById("leadForm"),
+  ["name","address","zip","phone","email"],
+  "New Website Lead — Complete Home Today",
+  {
+    btnEl: document.getElementById("submitBtn"),
+    btnLabel: "Check My Availability",
+    errEl: document.getElementById("formErr"),
+    doneEl: document.getElementById("formDone"),
+    fromName: "Complete Home Today Website",
+    accentColor: "var(--red)"
+  }
+);
+
+// ---- HIRING APPLICATION FORM ----
+submitToWeb3Forms(
+  document.getElementById("hireForm"),
+  ["name","phone","email","city"],
+  "New Job Application — Complete Home Today",
+  {
+    btnEl: document.getElementById("hSubmitBtn"),
+    btnLabel: "Submit Application →",
+    errEl: document.getElementById("hFormErr"),
+    doneEl: document.getElementById("hFormDone"),
+    fromName: "Complete Home Today — Job Applicant",
+    accentColor: "var(--gold)"
+  }
+);
 </script>
 </body>
 </html>
