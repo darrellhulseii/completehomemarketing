@@ -381,13 +381,15 @@ body.show-hiring .burger{display:none}
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .stat-card{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:24px 22px;transition:.2s}
 .stat-card:hover{border-color:var(--line2);transform:translateY(-2px)}
-.stat-card .stat-fig{font-family:'Archivo',sans-serif;font-weight:900;font-size:42px;line-height:1;letter-spacing:-.02em;color:var(--gold-br)}
+.stat-card .stat-fig{font-family:'Archivo',sans-serif;font-weight:900;font-size:25px;line-height:1.14;letter-spacing:-.01em;color:var(--gold-br)}
 .stat-card .stat-claim{font-size:14px;font-weight:600;color:var(--ink);line-height:1.45;margin-top:13px}
 .stat-card .stat-src{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:14px;padding-top:13px;border-top:1px solid var(--line)}
+.stat-card a.stat-src{text-decoration:none;transition:color .15s}
+.stat-card a.stat-src:hover{color:var(--gold-br)}
 .stat-note{margin-top:26px;font-size:14.5px;color:var(--muted);line-height:1.6;max-width:780px}
 .stat-note b{color:var(--gold-br);font-weight:700}
 @media(max-width:820px){.stat-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.stat-grid{grid-template-columns:1fr}.stat-card .stat-fig{font-size:38px}}
+@media(max-width:480px){.stat-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -728,12 +730,12 @@ body.show-hiring .burger{display:none}
   <div class="wrap">
     <div class="sec-head reveal stat-intro"><div class="eyebrow gold">What the research says</div><h2>Why people are walking away from the W-2 job</h2><p>Not our opinion — findings from the most-cited workplace studies of the past few years: Pew Research Center, Gallup, and MIT Sloan Management Review.</p></div>
     <div class="stat-grid">
-      <div class="stat-card reveal"><div class="stat-fig">31%</div><div class="stat-claim">Only 31% of U.S. workers are engaged at their job — a 10-year low. The rest are coasting or checked out.</div><span class="stat-src">Gallup · 2024</span></div>
-      <div class="stat-card reveal"><div class="stat-fig">Toxic Workplace</div><div class="stat-claim">A toxic workplace culture predicts who quits 10.4&times; more powerfully than pay does — the single biggest driver of turnover.</div><span class="stat-src">MIT Sloan Management Review · 2022</span></div>
-      <div class="stat-card reveal"><div class="stat-fig">63%</div><div class="stat-claim">63% who quit blamed low pay — and the same share blamed having no real path to advance.</div><span class="stat-src">Pew Research Center · 2022</span></div>
-      <div class="stat-card reveal"><div class="stat-fig">57%</div><div class="stat-claim">57% left their last job because they felt disrespected at work.</div><span class="stat-src">Pew Research Center · 2022</span></div>
-      <div class="stat-card reveal"><div class="stat-fig">70%</div><div class="stat-claim">About 70% of how engaged a team is traces back to one person — the manager you happen to be assigned.</div><span class="stat-src">Gallup</span></div>
-      <div class="stat-card reveal"><div class="stat-fig">45%</div><div class="stat-claim">45% walked away over having no say in when they work — no control of their own hours.</div><span class="stat-src">Pew Research Center · 2022</span></div>
+      <div class="stat-card reveal"><div class="stat-fig">Only 31% Engaged</div><div class="stat-claim">U.S. worker engagement just hit a 10-year low. The rest are coasting or checked out.</div><a class="stat-src" href="https://www.gallup.com/workplace/654911/employee-engagement-sinks-year-low.aspx" target="_blank" rel="noopener noreferrer">Gallup · 2024 ↗</a></div>
+      <div class="stat-card reveal"><div class="stat-fig">A Toxic Workplace</div><div class="stat-claim">Predicts who quits 10.4&times; more powerfully than pay does — the single biggest driver of turnover.</div><a class="stat-src" href="https://sloanreview.mit.edu/article/toxic-culture-is-driving-the-great-resignation/" target="_blank" rel="noopener noreferrer">MIT Sloan Management Review · 2022 ↗</a></div>
+      <div class="stat-card reveal"><div class="stat-fig">Low Pay</div><div class="stat-claim">63% who quit blamed low pay — and the same share blamed having no real path to advance.</div><a class="stat-src" href="https://www.pewresearch.org/short-reads/2022/03/09/majority-of-workers-who-quit-a-job-in-2021-cite-low-pay-no-opportunities-for-advancement-feeling-disrespected/" target="_blank" rel="noopener noreferrer">Pew Research Center · 2022 ↗</a></div>
+      <div class="stat-card reveal"><div class="stat-fig">57% Left</div><div class="stat-claim">They left their last job because they felt disrespected at work.</div><a class="stat-src" href="https://www.pewresearch.org/short-reads/2022/03/09/majority-of-workers-who-quit-a-job-in-2021-cite-low-pay-no-opportunities-for-advancement-feeling-disrespected/" target="_blank" rel="noopener noreferrer">Pew Research Center · 2022 ↗</a></div>
+      <div class="stat-card reveal"><div class="stat-fig">The Manager Sucks</div><div class="stat-claim">About 70% of how engaged a team is traces back to one person — the manager you happen to be assigned.</div><a class="stat-src" href="https://news.gallup.com/businessjournal/182792/managers-account-variance-employee-engagement.aspx" target="_blank" rel="noopener noreferrer">Gallup ↗</a></div>
+      <div class="stat-card reveal"><div class="stat-fig">No Say</div><div class="stat-claim">45% walked away over having no say in when they work — no control of their own hours.</div><a class="stat-src" href="https://www.pewresearch.org/short-reads/2022/03/09/majority-of-workers-who-quit-a-job-in-2021-cite-low-pay-no-opportunities-for-advancement-feeling-disrespected/" target="_blank" rel="noopener noreferrer">Pew Research Center · 2022 ↗</a></div>
     </div>
     <p class="stat-note reveal">The pattern is consistent: <b>capped pay, a boss who decides your future, no flexibility, and feeling like a number.</b> Independent contracting isn't the right move for everyone — but if those are the reasons you're looking, that's exactly what the Complete Home Today model is built to fix.</p>
   </div>
@@ -749,7 +751,7 @@ body.show-hiring .burger{display:none}
       <div class="why-card reveal"><div class="wc-icon">💰</div><h3>No artificial earnings ceiling</h3><p>Stack Frontier Fiber and ADT on the same install and earn on both. More products, more opportunity per door — no cap.</p><div class="wc-vs"><b>Industry pattern</b> Single-product reps limited by what the company sells, not what the customer needs.</div></div>
       <div class="why-card reveal"><div class="wc-icon">📄</div><h3>Everything in writing</h3><p>Your IC agreement covers commission structure, territory, chargeback rules, and payment timelines. Verbal promises don't exist here — the document does.</p><div class="wc-vs"><b>Industry pattern</b> Verbal commitments to reps that don't survive the first billing cycle.</div></div>
       <div class="why-card reveal"><div class="wc-icon">🎯</div><h3>Real products that close doors</h3><p>2 months free internet, $400 Samsung Best Buy credit, FOX One — these are today's actual offers. Strong promos mean more yeses per door.</p><div class="wc-vs"><b>Industry pattern</b> Reps sent out with expired offers or products customers don't recognize.</div></div>
-      <div class="why-card reveal"><div class="wc-icon">📈</div><h3>Training that builds earners</h3><p>D2DU 2.0 methodology — Sam Taggart's proven 5-step pitch, Feel/Felt/Found objection handling, and the Pullback Close. You're not thrown at a door unarmed.</p><div class="wc-vs"><b>Industry pattern</b> "Figure it out as you go" onboarding with no pitch framework and no coaching on the way up.</div></div>
+      <div class="why-card reveal"><div class="wc-icon">📈</div><h3>Training that builds earners</h3><p>In-depth pitch training for those who need support and travel options. You're not thrown at a door unarmed.</p><div class="wc-vs"><b>Industry pattern</b> "Figure it out as you go" onboarding with no pitch framework and no coaching on the way up.</div></div>
     </div>
   </div>
 </section>
@@ -796,7 +798,7 @@ body.show-hiring .burger{display:none}
       <div class="apply-step reveal"><div class="as-num"></div><h3>Submit your application</h3><p>Fill out the form below with your contact info and territory preference. Takes two minutes.</p></div>
       <div class="apply-step reveal"><div class="as-num"></div><h3>Quick phone screen</h3><p>A team leader calls to walk you through the role, answer your questions, and confirm it's a fit.</p></div>
       <div class="apply-step reveal"><div class="as-num"></div><h3>Sign your IC agreement</h3><p>Review and sign your 1099 Independent Contractor agreement — everything in writing before day one.</p></div>
-      <div class="apply-step reveal"><div class="as-num"></div><h3>Train and hit the field</h3><p>D2DU 2.0 pitch training, product walkthrough, and territory assignment. Then you're earning.</p></div>
+      <div class="apply-step reveal"><div class="as-num"></div><h3>Train and hit the field</h3><p>In-depth pitch training, product walkthrough, and territory assignment. Then you're earning.</p></div>
     </div>
   </div>
 </section>
@@ -810,7 +812,7 @@ body.show-hiring .burger{display:none}
       <p>This is a 1099 commission-only role. If you're self-motivated and want to control your income without a ceiling — fill out the form and a team leader will reach out within one business day.</p>
       <div class="hc-row"><span class="tick-gold">✓</span>Uncapped commission per confirmed install</div>
       <div class="hc-row"><span class="tick-gold">✓</span>Frontier Fiber + ADT — two products per door</div>
-      <div class="hc-row"><span class="tick-gold">✓</span>D2DU 2.0 pitch training provided</div>
+      <div class="hc-row"><span class="tick-gold">✓</span>In-depth pitch training, support, and travel options</div>
       <div class="hc-row"><span class="tick-gold">✓</span>Everything in your IC agreement — nothing verbal</div>
       <div class="hc-row"><span class="tick-gold">✓</span>AB5 &amp; Borello compliant · California territories</div>
       <div style="margin-top:22px;font-size:13px;color:var(--faint)">Prefer to call? Reach us at <a href="tel:+14089094484" style="color:var(--ink);font-weight:600">(408) 909-4484</a> or <a href="mailto:Completehometodayllc@gmail.com" style="color:var(--ink);font-weight:600">Completehometodayllc@gmail.com</a></div>
@@ -852,8 +854,8 @@ body.show-hiring .burger{display:none}
       <details class="gold-faq reveal"><summary>What products will I sell? <span class="pm">+</span></summary><div class="ans">Frontier Fiber Internet (200M through 7 Gig, plus EarthLink plans) and ADT-monitored home security through Direct Protection Security. Selling both on the same visit maximizes your per-door earnings. Current Frontier promos include 2 months free internet, a $400 Samsung Best Buy credit, and FOX One — strong tools that make the pitch easier.</div></details>
       <details class="gold-faq reveal"><summary>How and when do I get paid? <span class="pm">+</span></summary><div class="ans">Commission is earned per confirmed installation — not per pitch, not per signature. Payment timelines and the full rate structure are outlined in your IC agreement before you sign. Nothing is verbal.</div></details>
       <details class="gold-faq reveal"><summary>What if an install gets cancelled after I close the deal? <span class="pm">+</span></summary><div class="ans">Chargeback rules are defined in your IC agreement. You will know exactly under what conditions a commission is clawed back before you ever close your first deal. No surprises after the fact.</div></details>
-      <details class="gold-faq reveal"><summary>Do I need prior sales experience? <span class="pm">+</span></summary><div class="ans">No. We provide full in-depth pitch training based around your personality and style — a proven door-to-door methodology that covers the 5-step pitch, Feel/Felt/Found objection handling, and the Pullback Close. Prior experience helps, but what matters most is a self-starter mindset and willingness to put in the reps.</div></details>
-      <details class="gold-faq reveal"><summary>What territories are available? <span class="pm">+</span></summary><div class="ans">We currently operate in California markets including Gilroy, Watsonville, Salinas, Monterey, and surrounding ZIP codes. Territory assignment is discussed during your phone screen based on your location and availability.</div></details>
+      <details class="gold-faq reveal"><summary>Do I need prior sales experience? <span class="pm">+</span></summary><div class="ans">No. We provide in-depth pitch training for those who need support and travel options. Prior experience helps, but what matters most is a self-starter mindset and willingness to put in the reps.</div></details>
+      <details class="gold-faq reveal"><summary>What territories are available? <span class="pm">+</span></summary><div class="ans">Anywhere Frontier or EarthLink is available. Because EarthLink offers internet in all 50 states, there's opportunity throughout the United States. Fiber-optic internet is more limited — it isn't offered in every territory — but the majority of California is covered by one provider or the other, and fiber reaches roughly 28 states through Frontier and 21 through EarthLink. Your exact territory is set during your phone screen, based on your location and what's serviceable nearby.</div></details>
       <details class="gold-faq reveal"><summary>Is this compliant with California AB5? <span class="pm">+</span></summary><div class="ans">Yes. The IC agreement is drafted in compliance with California Labor Code §2775 et seq. (AB5) and the Borello multi-factor test. As an independent contractor, you are free to set your own schedule, choose your own routes, and control your own sales approach. You are not subject to behavioral control by the Company.</div></details>
     </div>
   </div>
